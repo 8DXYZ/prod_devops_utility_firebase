@@ -1,0 +1,156 @@
+{
+    "//": "Contains API Definitions for auto loading account user feature management (uaaaurm)",
+    "module": "@8DXYZ/application-service-template",
+    "apiMetaId": "apiMetaDemoServiceGroup2",
+    "serviceContext":"/templates/demo",
+    "serviceVersion":"/v_0",
+    "services": [
+        {
+            "serviceId": "UPDATE_NEW_ENTRY",
+            "uri": "/entry/:entryId",
+            "handlerFile": "./src/controllers/NewEntry2ManagementController.js",
+            "handlerMethod": "updateNewEntry",
+            "middleWareMethods": [],
+            "method": "PUT",
+            "description": "Update new entry infomation by entry id",
+            "inputDefinition": {
+                "queryParams":null,
+                "pathParams": {
+                    "entryId": {
+                        "desciption": "",
+                        "notes": "",
+                        "type": "string"
+                    }
+                },
+                "bodyData": {},
+                "headers":{}
+            },
+            "outputDefinition": "",
+            "response": {
+                "errors": {
+                    "new_entry_id_missing": "NEW_ENTRY_ID_MISSING_ERROR",
+                    "unknown": "UPDATE_NEW_ENTRY_UNKNOWN_ERROR"
+                },
+                "success": "UPDATE_NEW_ENTRY_BY_ID_SUCCESSFUL"
+            },
+            "serviceCodes": {
+                "UPDATE_NEW_ENTRY_BY_ID_SUCCESSFUL": {
+                    "serviceStatus": "success",
+                    "serviceMessage": "new entry retrieved.",
+                    "httpHeaderStatusCode": 200,
+                    "serviceStatusCode": "0000"
+                },
+                "NEW_ENTRY_ID_MISSING_ERROR": {
+                    "serviceStatus": "error",
+                    "serviceMessage": "new entry is missing or invaild.",
+                    "httpHeaderStatusCode": 400,
+                    "serviceErrorType": "DATA_MISSING",
+                    "serviceStatusCode": "1006",
+                    "serviceSupportMessage": "new entry id is missing or invaild."
+                },
+                "UPDATE_NEW_ENTRY_UNKNOWN_ERROR": {
+                    "serviceStatus": "error",
+                    "serviceMessage": "An unknown error occurred while retieving new entry.",
+                    "httpHeaderStatusCode": 500,
+                    "serviceErrorType": "UNKNOWN",
+                    "serviceStatusCode": "9001",
+                    "serviceSupportMessage": "Investigate needed for this error"
+                }
+            }
+        },
+        {
+            "serviceId": "UPLOAD_FILES",
+            "uri": "/entry/files",
+            "handlerFile": "./src/controllers/NewEntry2ManagementController.js",
+            "handlerMethod": "uploadFiles",
+            "middleWareMethods": [],
+            "method": "POST",
+            "description": "Uploade Files",
+            "inputDefinition": {
+                "queryParams":null,
+                "pathParams": null,
+                "bodyData": {},
+                "headers":{
+                    "Content-Type":"multipart/form-data"
+                  }
+            },
+            "outputDefinition": "",
+            "response": {
+                "errors": {
+                    "upload_missing": "UPLOAD_FILES_ERROR",
+                    "unknown": "UPLOAD_FILES_UNKNOWN_ERROR"
+                },
+                "success": "UPLOAD_FILES_SUCCESSFUL"
+            },
+            "serviceCodes": {
+                "UPLOAD_FILES_SUCCESSFUL": {
+                    "serviceStatus": "success",
+                    "serviceMessage": "file uploaded",
+                    "httpHeaderStatusCode": 200,
+                    "serviceStatusCode": "0000"
+                },
+                "UPLOAD_FILES_UNKNOWN_ERROR": {
+                    "serviceStatus": "error",
+                    "serviceMessage": "new entry is missing or invaild.",
+                    "httpHeaderStatusCode": 400,
+                    "serviceErrorType": "DATA_MISSING",
+                    "serviceStatusCode": "1006",
+                    "serviceSupportMessage": "new entry id is missing or invaild."
+                }
+            }
+        },
+        {
+            "serviceId": "DELETE_NEW_ENTRY",
+            "uri": "/entry",
+            "handlerFile": "./src/controllers/NewEntry2ManagementController.js",
+            "handlerMethod": "deleteNewEntry",
+            "middleWareMethods": [],
+            "method": "DELETE",
+            "description": "Delete new entry by Id",
+            "inputDefinition": {
+                "queryParams":null,
+                "pathParams":null,
+                "bodyData": {
+                    "entryId": {
+                        "desciption": "",
+                        "notes": "",
+                        "type": "string"
+                    }
+                },
+                "headers":{}
+            },
+            "outputDefinition": {},
+            "response": {
+                "errors": {
+                    "new entry id is missing": "NEW_ENTRY_ID_MISSING_ERROR",
+                    "unknown": "DELETE_NEW_ENTRY_UNKNOWN_ERROR"
+                },
+                "success": "NEW_ENTRY_DELETED"
+            },
+            "serviceCodes": {
+                "NEW_ENTRY_DELETED": {
+                    "serviceStatus": "success",
+                    "serviceMessage": "new entry deleted.",
+                    "httpHeaderStatusCode": 200,
+                    "serviceStatusCode": "0000"
+                },
+                "NEW_ENTRY_ID_MISSING_ERROR": {
+                    "serviceStatus": "error",
+                    "serviceMessage": "new entry id is missing or invaild.",
+                    "httpHeaderStatusCode": 400,
+                    "serviceErrorType": "DATA_MISSING",
+                    "serviceStatusCode": "1006",
+                    "serviceSupportMessage": "new entry id is missing or invaild."
+                },
+                "DELETE_NEW_ENTRY_UNKNOWN_ERROR": {
+                    "serviceStatus": "error",
+                    "serviceMessage": "An unknown error occurred.",
+                    "httpHeaderStatusCode": 500,
+                    "serviceErrorType": "UNKNOWN",
+                    "serviceStatusCode": "9001",
+                    "serviceSupportMessage": "Investigate needed for this error"
+                }
+            }
+        }
+    ]
+}

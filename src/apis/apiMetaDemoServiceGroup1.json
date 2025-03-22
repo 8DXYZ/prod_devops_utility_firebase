@@ -1,0 +1,135 @@
+{
+    "//": "Contains API Definitions for net entry management (demo)",
+    "module": "@8DXYZ/application-service-template",
+    "apiMetaId": "apiMetaDemoServiceGroup1",
+    "serviceContext":"/templates/demo",
+    "serviceVersion":"/v_0",
+    "services": [
+        {
+            "serviceId": "CREATE_NEW_ENTRY",
+            "uri": "/entry",
+            "handlerFile": "./src/controllers/NewEntryManagementController.js",
+            "handlerMethod": "createNewEntry",
+            "middleWareMethods": [
+                "security.CREATE_NEW_ENTRY.rateLimit"
+                ],
+            "method": "POST",
+            "description": "Create New Entry",
+            "inputDefinition": {
+                "pathParams":null,
+                "queryParams": null,
+                "bodyData": {},
+                "headers":{}
+            },
+            "security":{
+                "headers":{
+                    "directives": {
+                      "defaultSrc": ["'self'"],
+                      "scriptSrc": ["'self'", "https://trusted-scripts.com"],
+                      "styleSrc": ["'self'", "https://trusted-styles.com"],
+                      "imgSrc": ["'self'", "data:"]
+                    }
+                  },
+                "corsOptions":{
+                    "origin": "trustedOrigin",
+                    "methods": ["POST"],
+                    "credentials": "true"
+                  },
+                "rateLimit":
+                  {
+                    
+                    "windowMs": 90000, 
+                    "max": 100, 
+                    "message": "Too many requests from this IP, please try again later"
+                  }
+
+            },
+            "inputDataValidator": {},
+            "outputDefinition": "",
+            "response": {
+                "errors": {
+                    "unknown": "CREATE_NEW_ENTRY_UNKNOWN_ERROR"
+                },
+                "success": "NEW_ENTRY_CREATED"
+            },
+            "serviceCodes": {
+                "NEW_ENTRY_CREATED": {
+                    "serviceStatus": "success",
+                    "serviceMessage": "account user feature user feature created.",
+                    "httpHeaderStatusCode": 200,
+                    "serviceStatusCode": "0000"
+                },
+                "CREATE_NEW_ENTRY_UNKNOWN_ERROR": {
+                    "serviceStatus": "error",
+                    "serviceMessage": "An unknown error occurred while create account user feature.",
+                    "httpHeaderStatusCode": 500,
+                    "serviceErrorType": "UNKNOWN",
+                    "serviceStatusCode": "9001",
+                    "serviceSupportMessage": "Investigate needed for this error"
+                }
+            }
+        },
+        {
+            "serviceId": "GET_NEW_ENTRY",
+            "uri": "/entry/:entryId",
+            "handlerFile": "./src/controllers/NewEntryManagementController.js",
+            "handlerMethod": "getNewEntryById",
+            "middleWareMethods": [],
+            "method": "GET",
+            "description": "Get new entry by entry id",
+            "inputDefinition": {
+                "queryParams": null,
+                "pathParams": {
+                    "entryId": {
+                        "desciption": "",
+                        "notes": "",
+                        "type": "string"
+                    }
+                },
+                "bodyData": null,
+                "headers":{}
+            },
+            "outputDefinition": {},
+            "response": {
+                "errors": {
+                    "entry id missing": "ENTRY_ID_MISSING_ERROR",
+                    "new entry not found": "NEW_ENTRY_BY_ID_NOT_FOUND_ERROR",
+                    "unknown": "GET_NEW_ENTRY_BY_ID_UNKNOWN_ERROR"
+                },
+                "success": "GET_NEW_ENTRY_BY_ID_SUCCESSFUL"
+            },
+            "serviceCodes": {
+                "GET_NEW_ENTRY_BY_ID_SUCCESSFUL": {
+                    "serviceStatus": "success",
+                    "serviceMessage": "new entry retrieved.",
+                    "httpHeaderStatusCode": 200,
+                    "serviceStatusCode": "0000"
+                },
+                "ENTRY_ID_MISSING_ERROR": {
+                    "serviceStatus": "error",
+                    "serviceMessage": "new entry id is missing.",
+                    "httpHeaderStatusCode": 400,
+                    "serviceErrorType": "DATA_MISSING",
+                    "serviceStatusCode": "1005",
+                    "serviceSupportMessage": "new entry id is missing is missing or invaild."
+                },
+                "NEW_ENTRY_BY_ID_NOT_FOUND_ERROR": {
+                    "serviceStatus": "error",
+                    "serviceMessage": "new entry id is missing missing or invaild.",
+                    "httpHeaderStatusCode": 400,
+                    "serviceErrorType": "DATA_MISSING",
+                    "serviceStatusCode": "1005",
+                    "serviceSupportMessage": "new usentryer or new entry id  is missing or invaild."
+                },
+                "GET_NEW_ENTRY_BY_ID_UNKNOWN_ERROR": {
+                    "serviceStatus": "error",
+                    "serviceMessage": "An unknown error occurred while retieving new entry by id.",
+                    "httpHeaderStatusCode": 500,
+                    "serviceErrorType": "UNKNOWN",
+                    "serviceStatusCode": "9001",
+                    "serviceSupportMessage": "Investigate needed for this error"
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,222 @@
+{
+    "//": "Contains API Definitions for auto loading account user feature management (uaaaurm)",
+    //specify the project all apiMeta in a project shold all have the same name
+    "module": "@8DXYZ/admin-management",  
+    //id used to identify the this set of services  
+    "apiMetaId": "apiMetaUAAAUFM",  
+    "services": [
+        {
+            //rest service identifier
+            "serviceId": "CREATE_ACCOUNT_USER_FEATURE",
+             //rest service uri
+            "uri": "/admin/account_user_feature",
+             //rest service controller handler
+            "handlerFile": "./src/controllers/AccountUserFeatureManagementController.js",
+             //rest service controller method to handle the request
+            "handlerMethod": "createAccountUserFeature",
+            //method to process in between envent such as application token validation before hand etc...
+            "middleWareMethods": [],  
+            //restful method
+            "method": "POST",
+            "description": "Create New Account User Feature",
+            //body===null no body availiable
+            //parms===null no parmarms available
+
+            "inputDefinition": {
+                "params": null,
+                "body": {}
+            },
+            //this is to specify validator to validate the inputs
+            "inputDataValidator": {},
+            //output definition is define what the oput looks will be the schema of it. 
+            "outputDefinition": "",
+            //error keys that point to the service code - this is the standard way of handling the response
+            //but there is a couple custom reference implemenatation to reduce the effort with resuablility in mind 
+            "response": {
+                "errors": {
+                    "unknown": "CREATE_ACCOUNT_USER_FEATURE_UNKNOWN_ERROR"
+                },
+                "success": "ACCOUNT_USER_FEATURE_CREATED"
+            },
+            "serviceCodes": {
+                "ACCOUNT_USER_FEATURE_CREATED": {
+                    "serviceStatus": "success",
+                    "serviceMessage": "account user feature user feature created.",
+                    "httpHeaderStatusCode": 200,
+                    "serviceStatusCode": "0000"
+                },
+                "CREATE_ACCOUNT_USER_FEATURE_UNKNOWN_ERROR": {
+                    "serviceStatus": "error",
+                    "serviceMessage": "An unknown error occurred while create account user feature.",
+                    "httpHeaderStatusCode": 500,
+                    "serviceErrorType": "UNKNOWN",
+                    "serviceStatusCode": "9001",
+                    "serviceSupportMessage": "Investigate needed for this error"
+                }
+            }
+        },
+        {
+            "serviceId": "GET_ACCOUNT_USER_FEATURE",
+            "uri": "/admin/account_user_feature/:accountId/:userId",
+            "handlerFile": "./src/controllers/AccountUserFeatureManagementController.js",
+            "handlerMethod": "getAccounUserFeatureById",
+            "middleWareMethods": [],
+            "method": "GET",
+            "description": "Get account user feature by user Id",
+            "inputDefinition": {
+                "params": {
+                    "userId": {
+                        "desciption": "",
+                        "notes": "",
+                        "type": "string"
+                    },
+                    "accountId": {
+                        "desciption": "",
+                        "notes": "",
+                        "type": "string"
+                    }
+                },
+                "body": null
+            },
+            "outputDefinition": null,
+            "response": {
+                "errors": {
+                    "account user feature user feature/account_user_feature-id-missing": "ACCOUNT_USER_FEATURE_BY_ID_MISSING_ERROR",
+                    "account user feature user feature/account_user_feature-not-found": "ACCOUNT_USER_FEATURE_BY_ID_NOT_FOUND_ERROR",
+                    "unknown": "GET_ACCOUNT_USER_FEATURE_BY_ID_UNKNOWN_ERROR"
+                },
+                "success": "GET_ACCOUNT_USER_FEATURE_BY_ID_SUCCESSFUL"
+            },
+            "serviceCodes": {
+                "GET_ACCOUNT_USER_FEATURE_BY_ID_SUCCESSFUL": {
+                    "serviceStatus": "success",
+                    "serviceMessage": "account user feature user feature retrieved.",
+                    "httpHeaderStatusCode": 200,
+                    "serviceStatusCode": "0000"
+                },
+                "ACCOUNT_USER_FEATURE_BY_ID_NOT_FOUND_ERROR": {
+                    "serviceStatus": "error",
+                    "serviceMessage": "account user feature user feature not found.",
+                    "httpHeaderStatusCode": 400,
+                    "serviceErrorType": "DATA_MISSING",
+                    "serviceStatusCode": "1005",
+                    "serviceSupportMessage": "account user feature user feature id is missing or invaild."
+                },
+                "ACCOUNT_USER_FEATURE_BY_ID_MISSING_ERROR": {
+                    "serviceStatus": "error",
+                    "serviceMessage": "account user feature user feature id is missing or invaild.",
+                    "httpHeaderStatusCode": 400,
+                    "serviceErrorType": "DATA_MISSING",
+                    "serviceStatusCode": "1005",
+                    "serviceSupportMessage": "account user feature user feature id is missing or invaild."
+                },
+                "GET_ACCOUNT_USER_FEATURE_BY_ID_UNKNOWN_ERROR": {
+                    "serviceStatus": "error",
+                    "serviceMessage": "An unknown error occurred while retieving account user feature.",
+                    "httpHeaderStatusCode": 500,
+                    "serviceErrorType": "UNKNOWN",
+                    "serviceStatusCode": "9001",
+                    "serviceSupportMessage": "Investigate needed for this error"
+                }
+            }
+        },
+        {
+            "serviceId": "UPDATE_ACCOUNT_USER_FEATURE",
+            "uri": "/admin/account_user_feature/:id",
+            "handlerFile": "./src/controllers/AccountUserFeatureManagementController.js",
+            "handlerMethod": "updateAccountUserFeature",
+            "middleWareMethods": [],
+            "method": "PUT",
+            "description": "Update account user feature Infomation by user id",
+            "inputDefinition": {
+                "params": {
+                    "id": {
+                        "desciption": "",
+                        "notes": "",
+                        "type": "string"
+                    }
+                },
+                "body": {}
+            },
+            "outputDefinition": "",
+            "response": {
+                "errors": {
+                    "account user feature user feature/account_user_feature-id-missing": "ACCOUNT_USER_FEATURE_BY_ID_MISSING_ERROR",
+                    "unknown": "UPDATE_ACCOUNT_USER_FEATURE_UNKNOWN_ERROR"
+                },
+                "success": "GET_ACCOUNT_USER_FEATURE_BY_ID_SUCCESSFUL"
+            },
+            "serviceCodes": {
+                "GET_ACCOUNT_USER_FEATURE_BY_ID_SUCCESSFUL": {
+                    "serviceStatus": "success",
+                    "serviceMessage": "account user feature user feature retrieved.",
+                    "httpHeaderStatusCode": 200,
+                    "serviceStatusCode": "0000"
+                },
+                "ACCOUNT_USER_FEATURE_BY_ID_MISSING_ERROR": {
+                    "serviceStatus": "error",
+                    "serviceMessage": "account user feature user feature id is missing or invaild.",
+                    "httpHeaderStatusCode": 400,
+                    "serviceErrorType": "DATA_MISSING",
+                    "serviceStatusCode": "1006",
+                    "serviceSupportMessage": "account user feature user feature id is missing or invaild."
+                },
+                "UPDATE_ACCOUNT_USER_FEATURE_UNKNOWN_ERROR": {
+                    "serviceStatus": "error",
+                    "serviceMessage": "An unknown error occurred while retieving account.",
+                    "httpHeaderStatusCode": 500,
+                    "serviceErrorType": "UNKNOWN",
+                    "serviceStatusCode": "9001",
+                    "serviceSupportMessage": "Investigate needed for this error"
+                }
+            }
+        },
+        {
+            "serviceId": "DELETE_ACCOUNT_USER_FEATURE",
+            "uri": "/admin/account_user_feature",
+            "handlerFile": "./src/controllers/AccountUserFeatureManagementController.js",
+            "handlerMethod": "deleteAccountUserFeature",
+            "middleWareMethods": [],
+            "method": "DELETE",
+            "description": "Delete account user feature by Id",
+            "inputDefinition": {
+                "params":null,
+                "body": {
+
+                }
+            },
+            "outputDefinition": {},
+            "response": {
+                "errors": {
+                    "account user feature user feature/account_user_feature-id-missing": "ACCOUNT_USER_FEATURE_ID_MISSING_ERROR",
+                    "unknown": "DELETE_ACCOUNT_USER_FEATURE_UNKNOWN_ERROR"
+                },
+                "success": "ACCOUNT_USER_FEATURE_DELETED"
+            },
+            "serviceCodes": {
+                "ACCOUNT_USER_FEATURE_DELETED": {
+                    "serviceStatus": "success",
+                    "serviceMessage": "account user feature user feature deleted.",
+                    "httpHeaderStatusCode": 200,
+                    "serviceStatusCode": "0000"
+                },
+                "ACCOUNT_USER_FEATURE_ID_MISSING_ERROR": {
+                    "serviceStatus": "error",
+                    "serviceMessage": "account user feature user feature id is missing or invaild.",
+                    "httpHeaderStatusCode": 400,
+                    "serviceErrorType": "DATA_MISSING",
+                    "serviceStatusCode": "1006",
+                    "serviceSupportMessage": "account user feature user feature id is missing or invaild."
+                },
+                "DELETE_ACCOUNT_USER_FEATURE_UNKNOWN_ERROR": {
+                    "serviceStatus": "error",
+                    "serviceMessage": "An unknown error occurred.",
+                    "httpHeaderStatusCode": 500,
+                    "serviceErrorType": "UNKNOWN",
+                    "serviceStatusCode": "9001",
+                    "serviceSupportMessage": "Investigate needed for this error"
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,25 @@
+#application key to safe guard tampering in transistion.
+JWT_SECRET=my top secret 
+PORT=3002
+#default server port
+SERVICE_PORT=3000
+#default token refresh port
+TOKEN_SERVICE_PORT=3000
+#Running application in debug mode
+DEBUG=true
+#/dev/uaa  user account access
+#/dev/atm  application token managment
+ENV=dev 
+#APP_NAME=admin-management SYSTEM_APP
+#APP_ID=1d68cf85-158d-46dc-bf99-04e637da95ab SYSTEM_ID
+#APP_VERSION=0.0.0  SYSTEM_APP_VERSION client app should provide this 
+APP_NAME=  
+APP_ID=
+APP_VERSION=
+
+
+FIREBASE_REALTIME_UAA_ROOT=uaa
+FIREBASE_REALTIME_ATM_ROOT=atm
+FIREBASE_REALTIME_DEMO_ROOT=demo
+
+

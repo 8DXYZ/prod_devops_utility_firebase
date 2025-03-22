@@ -1,0 +1,16 @@
+{
+    "applicaitons": {
+        "$application": {
+            "name": {},
+            "descripton": {},
+            "features": {
+                "$feature": {
+                    "name": {},
+                    "enabled": {}
+                }
+            }
+        }
+        
+    },
+    "metat":[]
+}
