@@ -1,0 +1,60 @@
+{   
+   
+    "APP_HEADERS":{
+        "APP_VERSION":"x-app-version",
+        "APP_ID":"x-app-id",
+        "APP_TOKEN":"x-app-token",
+        "APP_NAME":"x-app-name",
+        "AUTHORIZATION":"authorization"
+      },
+    "APP_SERVICE_RESOURCES":{
+        "FIREBASE_SERVICES": {
+          "SERVICES": null,
+          "ADMIN_REALTIME": null,
+          "ADMIN_FIRESTORE": null,
+          "ADMIN_STORAGE": null,
+          "ADMIN_AUTH":null,
+          "CLIENT_AUTH":null
+        },
+        "ROOT_PATHS":{
+          "FIRESTORE_ROOT":null,
+          "STORAGE_ROOT":null,
+          "FIRESTORE_APP_USERS_ROOT":  null,
+          "STORAGE_APP_ROOT": null,
+          "USER_DATA_PATH":   null
+        },
+        "FIREBASE_AUTH":{
+            "API_KEY": null,
+            "SIGIN_EMAIL_PASSWORD_URL": "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key={API_KEY}",
+            "ACCOUNT_LOOKUP_URL": "https://identitytoolkit.googleapis.com/v1/accounts:lookup?key=${API_KEY}",
+            "SECURE_TOKEN_URL": "https://securetoken.googleapis.com/v1/token",
+            "CREATE_USER_URL": "https://identitytoolkit.googleapis.com/v1/accounts:signUp",
+            "PASSWORD_USER_URL": "https://identitytoolkit.googleapis.com/v1/accounts:sendOobCode",
+            "EMAIL_TEMPLATE_PARAMS": {
+                "EMAIL_LINK_TEMPLATE": "https://your-app.example.com/reset-password?oobCode={OOB_CODE}&email={EMAIL}",
+                "EMAIL_TEMPLATES": {
+                  "en": {
+                    "subject": "Reset your password",
+                    "body": "Click the link below to reset your password. If you did not request this, please ignore this email."
+                  },
+                  "es": {
+                    "subject": "Restablezca su contraseña",
+                    "body": "Haga clic en el enlace a continuación para restablecer su contraseña. Si no solicitó esto, ignore este correo."
+                  }
+                }
+              }
+        },
+        "STRIPE_SERVICES":{
+          "SERVICES":null,
+          "STRIPE_SECRET":null,
+          "STRIPE_WEBHOOK_SECRET":null,
+          "STRIPE_CHECKOUT_SESSION_SUCCESS_URL": null,
+          "STRIPE_CHECKOUT_SESSION_CANCEL_URL":null,
+          "STRIPE_BILLING_PORTAL_SESSION_REDIRECT_URL":null
+
+        }
+      },
+    "TRANSFORM":null,
+    "ENV":null
+      
+}

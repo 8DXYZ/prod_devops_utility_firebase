@@ -1,0 +1,226 @@
+{
+    "document_id": {
+      "stringValue": "your-document-id",
+      "timestamp": "2025-03-10T12:34:56Z",
+      "user_info": {
+        "user_id": {
+          "key": "user_id",
+          "data_type": "string",
+          "value": "user-123"
+        },
+        "name": {
+          "key": "name",
+          "data_type": "string",
+          "value": "John Doe"
+        },
+        "email": {
+          "key": "email",
+          "data_type": "string",
+          "value": "johndoe@example.com"
+        },
+        "profile_pic": {
+          "key": "profile_pic",
+          "data_type": "string",
+          "value": "https://link-to-profile-pic.com"
+        }
+      },
+      "settings": {
+        "notifications_enabled": {
+          "key": "notifications_enabled",
+          "data_type": "boolean",
+          "value": true
+        },
+        "theme": {
+          "key": "theme",
+          "data_type": "string",
+          "value": "dark"
+        },
+        "language": {
+          "key": "language",
+          "data_type": "string",
+          "value": "en"
+        }
+      },
+      "data": {
+        "values": [
+          {
+            "key": "value1",
+            "data_type": "string",
+            "value": "Sample value 1"
+          },
+          {
+            "key": "value2",
+            "data_type": "number",
+            "value": 42
+          },
+          {
+            "key": "value3",
+            "data_type": "geoPoint",
+            "value": {
+              "latitude": {
+                "key": "latitude",
+                "data_type": "number",
+                "value": 37.7749
+              },
+              "longitude": {
+                "key": "longitude",
+                "data_type": "number",
+                "value": -122.4194
+              }
+            }
+          },
+          {
+            "key": "value4",
+            "data_type": "blob",
+            "value": "base64_encoded_binary_data"
+          }
+        ]
+      },
+      "subcollections": {
+        "comments": {
+          "document1": {
+            "comment_id": {
+              "key": "comment_id",
+              "data_type": "string",
+              "value": "comment-001"
+            },
+            "user_id": {
+              "key": "user_id",
+              "data_type": "string",
+              "value": "user-123"
+            },
+            "text": {
+              "key": "text",
+              "data_type": "string",
+              "value": "This is a comment."
+            },
+            "timestamp": {
+              "key": "timestamp",
+              "data_type": "timestamp",
+              "value": "2025-03-10T12:45:00Z"
+            },
+            "subcollections": {
+              "replies": {
+                "reply-001": {
+                  "reply_id": {
+                    "key": "reply_id",
+                    "data_type": "string",
+                    "value": "reply-001"
+                  },
+                  "user_id": {
+                    "key": "user_id",
+                    "data_type": "string",
+                    "value": "user-456"
+                  },
+                  "text": {
+                    "key": "text",
+                    "data_type": "string",
+                    "value": "This is a reply to the comment."
+                  },
+                  "timestamp": {
+                    "key": "timestamp",
+                    "data_type": "timestamp",
+                    "value": "2025-03-10T12:50:00Z"
+                  }
+                }
+              }
+            }
+          },
+          "document2": {
+            "comment_id": {
+              "key": "comment_id",
+              "data_type": "string",
+              "value": "comment-002"
+            },
+            "user_id": {
+              "key": "user_id",
+              "data_type": "string",
+              "value": "user-456"
+            },
+            "text": {
+              "key": "text",
+              "data_type": "string",
+              "value": "This is another comment."
+            },
+            "timestamp": {
+              "key": "timestamp",
+              "data_type": "timestamp",
+              "value": "2025-03-10T12:50:00Z"
+            },
+            "subcollections": {
+              "replies": {
+                "reply-002": {
+                  "reply_id": {
+                    "key": "reply_id",
+                    "data_type": "string",
+                    "value": "reply-002"
+                  },
+                  "user_id": {
+                    "key": "user_id",
+                    "data_type": "string",
+                    "value": "user-789"
+                  },
+                  "text": {
+                    "key": "text",
+                    "data_type": "string",
+                    "value": "This is another reply."
+                  },
+                  "timestamp": {
+                    "key": "timestamp",
+                    "data_type": "timestamp",
+                    "value": "2025-03-10T13:00:00Z"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "history": {
+          "document1": {
+            "action": {
+              "key": "action",
+              "data_type": "string",
+              "value": "added"
+            },
+            "timestamp": {
+              "key": "timestamp",
+              "data_type": "timestamp",
+              "value": "2025-03-10T12:30:00Z"
+            },
+            "details": {
+              "key": "details",
+              "data_type": "string",
+              "value": "Added new user info"
+            },
+            "subcollections": {
+              "updates": {
+                "update-001": {
+                  "update_id": {
+                    "key": "update_id",
+                    "data_type": "string",
+                    "value": "update-001"
+                  },
+                  "user_id": {
+                    "key": "user_id",
+                    "data_type": "string",
+                    "value": "user-123"
+                  },
+                  "changes": {
+                    "key": "changes",
+                    "data_type": "string",
+                    "value": "Updated name"
+                  },
+                  "timestamp": {
+                    "key": "timestamp",
+                    "data_type": "timestamp",
+                    "value": "2025-03-10T12:35:00Z"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
