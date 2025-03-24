@@ -1,0 +1,30 @@
+{
+    [root_document]: {
+      [collection]: {
+        [document]: {
+          "fields": {
+            [field]: ""
+          },
+          "collections": {
+            [subcollection]: {
+              "fields": {
+                [field]: ""
+              },
+              "collections": {}
+            }
+          }
+        }
+      },
+      "fields": {
+        [field]: ""
+      },
+      "collections": {
+        [collection]: {
+          "fields": {
+            [field]: ""
+          },
+          "collections": {}
+        }
+      }
+    }
+  }

@@ -19,7 +19,8 @@ async function testConnection() {
         console.log(firestore);
   }
 
- 
+
+
 /**
  * Exports a Firestore document with its subcollections to a JSON file.
  * @param {string} docId - The document ID to export.
@@ -43,34 +44,10 @@ async function exportDocument(docId, configPath, firestore) {
       fs.writeFileSync(configPath, JSON.stringify({}), 'utf-8');
     }
 
-    // Get the main document
-    const documentRef = firestore.doc(docId);
-    const docSnapshot = await documentRef.get();
-
-    if (!docSnapshot.exists) {
-      console.log(`Document with ID ${docId} not found.`);
-      return;
-    }
-
     // Initialize the JSON structure with the document data
     const data = {
-      [docId]: {
-        document: await formatDocument(docSnapshot),  // Fields go here
-        collections: {}  // Subcollections go here
-      }
+      [docId]: await fetchDocumentData(docId, firestore)  // Recursively fetch document and subcollections
     };
-
-    // Recursively fetch subcollections and their documents
-    console.log(`Fetching subcollections for document ${docId}`);
-    await fetchSubcollections(docId, data[docId].collections, firestore);
-
-    // Ensure that the document has a document field (empty if none) and a collections field
-    if (Object.keys(data[docId].document).length === 0) {
-      data[docId].document = {};  // Set an empty document if no fields
-    }
-    if (Object.keys(data[docId].collections).length === 0) {
-      data[docId].collections = {};  // Set an empty collections object if no subcollections
-    }
 
     // Write the resulting data to the specified configPath file
     console.log(`Writing export data to ${configPath}`);
@@ -82,63 +59,69 @@ async function exportDocument(docId, configPath, firestore) {
 }
 
 /**
- * Formats the document data according to the schema (fields only).
- * @param {Object} docSnapshot - The Firestore document snapshot.
- * @returns {Object} The formatted document data.
+ * Recursively fetches document data including its fields and subcollections.
+ * @param {string} docId - The document ID to fetch data for.
+ * @param {Object} firestore - The Firestore instance (already initialized).
+ * @returns {Object} The document data including fields and subcollections.
  */
-async function formatDocument(docSnapshot) {
-  const docData = docSnapshot.data();
-  const formattedData = {};
+async function fetchDocumentData(docId, firestore) {
+  const documentRef = firestore.doc(docId);
+  const docSnapshot = await documentRef.get();
 
-  // If the document has data (fields), format it
-  if (docData) {
-    for (const key in docData) {
-      const value = docData[key];
-      const dataType = typeof value === 'object' && value !== null
-        ? (Array.isArray(value) ? 'array' : 'object') // Check if the value is a nested object (map or array)
-        : typeof value; // For primitive values
-
-      formattedData[key] = value;  // Set the field data in the document
-    }
+  if (!docSnapshot.exists) {
+    return {};
   }
 
-  return formattedData;
+  const docData = docSnapshot.data();
+  const documentFields = {};
+
+  // Format the fields of the document
+  for (const field in docData) {
+    documentFields[field] = docData[field];
+  }
+
+  // Fetch the subcollections of the document
+  const subcollections = {};
+  await fetchSubcollections(docId, subcollections, firestore);
+
+  // Return the document's fields and subcollections in the required schema
+  return {
+    fields: documentFields,
+    collections: subcollections
+  };
 }
 
 /**
- * Recursively fetches subcollections of a document and adds them to the JSON data under collections.
+ * Recursively fetches subcollections of a document and adds them to the collections object.
  * @param {string} docId - The document ID to fetch subcollections for.
  * @param {Object} collections - The collections object to append subcollections to.
  * @param {Object} firestore - The Firestore instance (already initialized).
  */
 async function fetchSubcollections(docId, collections, firestore) {
   try {
-    console.log(`Fetching subcollections for document ${docId}`);
     const subcollections = await firestore.doc(docId).listCollections();
 
-    // If the document has no subcollections, ensure the collections field is empty
     if (subcollections.length === 0) {
-      collections = {};
+      collections = {}; // Empty collections if no subcollections
     }
 
     for (const subcollection of subcollections) {
       const subcollectionName = subcollection.id;
       collections[subcollectionName] = {
-        document: {}, // We will store the documents in this subcollection
-        collections: {} // Subcollections within this subcollection (handled recursively)
+        fields: {},       // Store fields of documents in this subcollection
+        collections: {}   // Store subcollections within this subcollection
       };
 
       const subcollectionSnapshot = await subcollection.get();
       for (const doc of subcollectionSnapshot.docs) {
-        collections[subcollectionName].document[doc.id] = await formatDocument(doc);
+        // Saving document data in the fields of the subcollection
+        collections[subcollectionName].collections[doc.id] = await fetchDocumentData(doc.ref.path, firestore);
         console.log(`Subcollection document ${doc.id} fetched for ${subcollectionName}`);
-        // Recursively handle subcollections inside this subcollection
-        await fetchSubcollections(doc.ref.path, collections[subcollectionName].collections, firestore);
       }
 
-      // Ensure that the subcollection has a document field (empty if none) and a collections field
-      if (Object.keys(collections[subcollectionName].document).length === 0) {
-        collections[subcollectionName].document = {};  // Empty document if no fields
+      // If a subcollection has no documents or subcollections, ensure it is empty
+      if (Object.keys(collections[subcollectionName].fields).length === 0) {
+        collections[subcollectionName].fields = {};  // Empty fields if no fields
       }
       if (Object.keys(collections[subcollectionName].collections).length === 0) {
         collections[subcollectionName].collections = {};  // Empty collections if no subcollections
@@ -153,103 +136,79 @@ async function fetchSubcollections(docId, collections, firestore) {
 
 
 
-
 /**
- * Imports a Firestore document and its subcollections from a JSON file to a user-specified target Firestore document path.
- * @param {string} jsonFile - Path to the JSON file to import from.
- * @param {string} targetDocumentPath - Firestore document path to which the data will be imported.
- * @param {Object} firestore - The Firestore instance to import the data into (already initialized).
+ * Import data into Firestore from a JSON file
+ * @param {string} jsonFilePath - Path to the JSON file to import.
+ * @param {string} targetDocPath - The Firestore document path to import the data to.
  */
-async function importDocument(jsonFile, targetDocumentPath, firestore) {
+async function importDocument(jsonFilePath, targetDocPath, firestore) {
   try {
-    // Read and parse the JSON file
-    const jsonData = JSON.parse(fs.readFileSync(jsonFile, 'utf-8'));
-    console.log(`JSON data read from ${jsonFile}`);
+    // Read the JSON file containing the exported Firestore data
+    const rawData = fs.readFileSync(jsonFilePath, 'utf-8');
+    const data = JSON.parse(rawData);
 
-    // Log available keys in the JSON file (just for debugging)
-    console.log('Available paths in JSON:', Object.keys(jsonData));
+    console.log(`Starting import for document ${targetDocPath} from ${jsonFilePath}`);
 
-    // Extract the data from the JSON (using the user-specified targetDocumentPath)
-    if (!jsonData || !jsonData[targetDocumentPath]) {
-      console.error(`No data found in the JSON file for the specified target path: ${targetDocumentPath}`);
-      return;
+    // Check if the target document exists, if not, create it
+    const documentRef = firestore.doc(targetDocPath);
+    const docSnapshot = await documentRef.get();
+
+    // If document doesn't exist, create it with empty data
+    if (!docSnapshot.exists) {
+      await documentRef.set({});
+      console.log(`Created new document at ${targetDocPath}`);
     }
 
-    // Import the document data (main document and subcollections) to the user-specified target path
-    console.log(`Importing data to Firestore path: ${targetDocumentPath}`);
-    await importSubcollections(jsonData, targetDocumentPath, firestore);
-    console.log(`Imported document data from ${jsonFile} to ${targetDocumentPath}`);
+    // Start importing the data recursively
+   // await importDocumentData(targetDocPath, data[targetDocPath], firestore);
+    await importDocumentData(targetDocPath, Object.values(data)[0], firestore);
+    console.log(`Import completed for document ${targetDocPath}`);
   } catch (error) {
-    console.error('Error importing document:', error);
+    console.error(`Error importing document from ${jsonFilePath}:`, error);
   }
 }
 
 /**
- * Recursively imports a document and its subcollections from the JSON structure to Firestore.
- * @param {Object} data - The data object to be imported (document and subcollections).
- * @param {string} documentPath - The path where the data will be imported in Firestore.
- * @param {Object} firestore - The Firestore instance to import the data into (already initialized).
+ * Recursively imports document data and subcollections
+ * @param {string} docPath - The document path in Firestore.
+ * @param {Object} docData - The document data to import.
+ * @param {Object} firestore - The Firestore instance.
  */
-async function importSubcollections(data, documentPath, firestore) {
-  try {
-    const documentData = data[documentPath].document;
+async function importDocumentData(docPath, docData, firestore) {
+  const documentRef = firestore.doc(docPath);
 
-    // Handle fields in the document
-    if (documentData) {
-      console.log(`Importing document fields:`, documentData);
-      await firestore.doc(documentPath).set(documentData);
-      console.log(`Document imported to ${documentPath}`);
-    } else {
-      console.log(`No document fields to import for ${documentPath}`);
-    }
-
-    // Handle subcollections in the "collections" part of the JSON
-    if (data[documentPath].collections) {
-      for (const collectionName in data[documentPath].collections) {
-        const subcollectionData = data[documentPath].collections[collectionName];
-        // Recursively import each document in the subcollection
-        await importSubcollectionsToSubcollection(subcollectionData, documentPath, collectionName, firestore);
-      }
-    }
-  } catch (error) {
-    console.error(`Error importing subcollections for ${documentPath}:`, error);
+  // Import fields for the current document
+  if (docData.fields) {
+    console.log(`Importing fields for document ${docPath}`);
+    await documentRef.set(docData.fields, { merge: true });
   }
-}
 
-/**
- * Helper function to import a subcollection recursively.
- * @param {Object} subcollectionData - The data for the subcollection (documents).
- * @param {string} parentPath - The parent document path to which the subcollection will be added.
- * @param {string} collectionName - The name of the subcollection.
- * @param {Object} firestore - The Firestore instance to import the data into (already initialized).
- */
-async function importSubcollectionsToSubcollection(subcollectionData, parentPath, collectionName, firestore) {
-  try {
-    const subcollectionPath = `${parentPath}/${collectionName}`;
+  // Recursively handle subcollections for the current document
+  if (docData.collections) {
+    console.log(`Importing collections for document ${docPath}`);
+    for (const collectionName in docData.collections) {
+      const collectionData = docData.collections[collectionName];
+      const collectionRef = documentRef.collection(collectionName);
 
-    // Log to show the subcollection data we're about to import
-    console.log(`Processing subcollection at ${subcollectionPath}`);
-    if (subcollectionData.document) {
-      for (const docId in subcollectionData.document) {
-        const docData = subcollectionData.document[docId];
+      // Import each document in the subcollection
+      for (const docId in collectionData.collections) {
+        const subDocData = collectionData.collections[docId];
 
-        // Import each document in the subcollection
-        await firestore.collection(subcollectionPath).doc(docId).set(docData);
-        console.log(`Document ${docId} imported to ${subcollectionPath}`);
+        // Import the subdocument
+        const subDocRef = collectionRef.doc(docId);
+        console.log(`Importing subcollection document ${docId} in ${collectionName}`);
+        await subDocRef.set(subDocData.fields, { merge: true });
 
-        // Recursively handle any nested subcollections for the document
-        if (subcollectionData.collections && subcollectionData.collections[docId]) {
-          const nestedSubcollectionData = subcollectionData.collections[docId];
-          await importSubcollectionsToSubcollection(nestedSubcollectionData, `${subcollectionPath}/${docId}`, collectionName, firestore);
+        // Recursively handle subcollections within the subdocument
+        if (subDocData.collections) {
+          await importDocumentData(subDocRef.path, subDocData, firestore);
         }
       }
-    } else {
-      console.log(`No documents in subcollection ${collectionName} at ${subcollectionPath}`);
     }
-  } catch (error) {
-    console.error(`Error importing subcollection ${collectionName} at ${parentPath}:`, error);
   }
 }
+
+
   
   /**
  * Copies a Firestore document and its subcollections from source to target Firestore instances.
