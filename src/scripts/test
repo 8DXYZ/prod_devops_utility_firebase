@@ -1,8 +1,19 @@
-com/ireva/edax/dev/0.0.0/0
-com/ireva/edax/test/0.0.0/0
-com/ireva/edax/stage/0.0.0/0
-com/ireva/edax/dev/0.0.0/0
+
 
 com/8-d/platform/dev
 
+8-D ENV
+/COM/IREVA/EDAX/DEV/EH/0_0_0
+/COM/IREVA/EDAX/TEST/0_0_0/0
+/COM/IREVA/EDAX/INT/0_0_0/0
 
+
+IREVA ENV
+/COM/IREVA/EDAX/STG/0_0_0/0
+/COM/IREVA/EDAX/PROD
+
+node ./src/scripts/runMigration.js export /IREVA/DEV_01 test.json 
+node ./src/scripts/runMigration.js import GOLD_SCHEMA_0.0.0.json /COM/IREVA/EDAX/DEV/EH/0_0_0  
+node ./src/scripts/runMigration.js import GOLD_SCHEMA_0.0.0.json /COM/IREVA/EDAX/TEST/0_0_0/0  
+node ./src/scripts/runMigration.js import GOLD_SCHEMA_0.0.0.json /COM/IREVA/EDAX/INT/0_0_0/0 
+node ./src/scripts/runMigration.js import GOLD_SCHEMA_0.0.0.json /COM/IREVA/SCHEMA/EDAX/GOLD/0_0_0
