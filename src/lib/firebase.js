@@ -1,4 +1,4 @@
-const FirebaseService = require('@8DXYZ/firebase-connect');
+const FirebaseService = require('@8d-xyz/bk-firebase_connect-lib');
 
 // Instantiate FirebaseService, using .env for configuration
 

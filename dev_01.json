@@ -1,0 +1,726 @@
+{
+  "/IREVA/DEV_01": {
+    "document": {
+      "USAGE_STATS": {
+        "EDAX": {
+          "STORAGE": {
+            "FIRESTORE": "",
+            "REALTIME": "",
+            "FILE": ""
+          },
+          "TRAFFIC": {
+            "IN": {
+              "FIRESTORE": "",
+              "REALTIME": ""
+            },
+            "OUT": {
+              "FIRESTORE": "",
+              "REALTIME": ""
+            },
+            "INTERNAL": ""
+          },
+          "ACCESS_TIME": {
+            "AUTHENTICATION": "",
+            "TIME": ""
+          }
+        },
+        "OVERALL": {
+          "STORAGE": {
+            "FILE": "",
+            "DATA": {
+              "FIRESTORE": "",
+              "REALTIME": ""
+            }
+          },
+          "ACCESS_TIME": "",
+          "TRAFFIC": {
+            "IN": {
+              "FIRESTORE": "",
+              "REALTIME": ""
+            },
+            "OUT": {
+              "FIRESTORE": "",
+              "REALTIME": ""
+            },
+            "ACCESS_TIME": {
+              "AUTHENTICATION": "",
+              "TIME": ""
+            }
+          }
+        }
+      },
+      "USERBASE": {
+        "AIDEMI": "",
+        "EDAX": "",
+        "TKM": ""
+      },
+      "VERSION": "0.0.0"
+    },
+    "collections": {
+      "EDAX": {
+        "document": {
+          "ACCOUNT_TYPES": {
+            "ACCOUNT_USER": {},
+            "ADMINISTRATOR": {}
+          },
+          "FEATURES": {
+            "MANAGE_CREDENTIALS": {},
+            "MANAGE_USERS": "",
+            "MANAGE_GROUPS": "",
+            "MANAGE_ACCOUNTS": "",
+            "FREESTYLE_GROUPINGS": "",
+            "SHARE_ACCESS": "",
+            "AD_FREE": "",
+            "MULTI_USERS": "",
+            "MANAGE_CONTACTS": "",
+            "SEARCH": "",
+            "ENTITY_GROUPINGS": ""
+          },
+          "META": {
+            "PLANS": {
+              "INDIVIDUAL_MINIMALIST": {},
+              "INDIVIDUAL_PLUS": {},
+              "INDIVIDUAL_FREEDOM": {
+                "ADS": "ON",
+                "FREESTYLE_GROUPINGS": "OFF",
+                "MANAGE_CREDENTIALS": "ON",
+                "MANAGE_ACCOUNTS": "ON",
+                "MANAGE_CONTACTS": "ON",
+                "MANAGE_GROUPS": "ON",
+                "MANAGE_USERS": "OFF",
+                "TOTAL_LICENSE_SEATS": 1,
+                "USED_LICENSE_SEATS": 1,
+                "SEARCH": "ON",
+                "DATA_SHARING": "OFF"
+              }
+            }
+          },
+          "PLANS": {
+            "INDIVIDUAL_PLUS": {
+              "FEATURES": {
+                "MULTI_USERS": false,
+                "SEARCH": true,
+                "MANAGE_USERS": false,
+                "MANAGE_GROUPS": false,
+                "MANAGE_CREDENTIALS": true,
+                "MANAGE_CONTACTS": true,
+                "MANAGE_ACCOUNTS": true,
+                "FREESTYLE_GROUPINGS": false,
+                "ENTITY_GROUPINGS": true,
+                "AD_FREE": false,
+                "DATA_SHARING": false
+              }
+            },
+            "INDIVIDUAL_FREEDOM": {
+              "FEATURES": {
+                "AD_FREE": false,
+                "SEARCH": true,
+                "MULTI_USERS": false,
+                "DATA_SHARING": false,
+                "FREESTYLE_GROUPINGS": false,
+                "ENTITY_GROUPINGS": true,
+                "MANAGE_ACCOUNTS": true,
+                "MANAGE_CREDENTIALS": true,
+                "MANAGE_CONTACTS": true,
+                "MANAGE_GROUPS": true,
+                "MANAGE_USERS": false
+              }
+            },
+            "INDIVIDUAL_MINIMALIST": {
+              "FEATURES": {
+                "DATA_SHARE": false,
+                "SEARCH": true,
+                "MULTI_USERS": false,
+                "ENTITY_GROUPINGS": true,
+                "FREESTYLE_GROUPINGS": false,
+                "MANAGE_ACCOUNTS": true,
+                "MANAGE_CREDENTIALS": true,
+                "MANAGE_CONTACTS": false,
+                "MANAGE_USERS": false,
+                "MANAGE_GROUPS": false,
+                "AD_FREE": false
+              }
+            }
+          },
+          "ROLES": {
+            "USER": {},
+            "OWNER": {},
+            "CLIENT_ADMIN": {},
+            "ADMIN": {},
+            "ADMIN_SUPPORT": {}
+          }
+        },
+        "collections": {}
+      },
+      "OPERATIONS": {
+        "document": {
+          "EDAX": {}
+        },
+        "collections": {
+          "SUPPORTS": {
+            "document": {
+              "A": {}
+            },
+            "collections": {}
+          }
+        }
+      },
+      "TKM": {
+        "document": {
+          "CLIENT_TOKENS": {
+            "ce72093c-090a-4ef7-9a99-7c3120dd03b4": {
+              "APP_ID": "a928db69-6380-41d4-965d-354e6c5920db",
+              "APP_KEY": "d762b93c-d45a-4efa-ad06-f0c20e43814a",
+              "STATUS": "ACTIVE",
+              "DESCRIPTION": "",
+              "NOTE": "",
+              "CREATED_ON": {
+                "_seconds": 1735588913,
+                "_nanoseconds": 293000000
+              },
+              "EXPIRED_ON": {
+                "_seconds": 1767168141,
+                "_nanoseconds": 22000000
+              },
+              "ROLES": {},
+              "PERMISSIONS": {},
+              "APP_TOKEN": "d671f141-3056-4b72-b614-2b4a66020a9d"
+            }
+          },
+          "SYSTEM_APPS": {
+            "APP_KEYS": {
+              "1738dea6-a082-40d6-a693-3ae536a0d62": {
+                "0_0_0": "7ff6244b-129b-4f62-ab95-dd8bee2cae2b"
+              }
+            },
+            "APPS": {
+              "EDAX": {
+                "SYSTEM_APP_NAME": "EDAX",
+                "CREATED_ON": {
+                  "_seconds": 1735588734,
+                  "_nanoseconds": 744000000
+                },
+                "SYSTEM_APP_ID": "1738dea6-a082-40d6-a693-3ae536a0d62"
+              }
+            }
+          }
+        },
+        "collections": {}
+      },
+      "USERS": {
+        "document": {
+          "axDmmhB9sXQNh3JZZ991Yulrkpp1": {
+            "ACCOUNTS": {
+              "EDAX": {
+                "APP_ADMIN": {
+                  "ROLES": {},
+                  "FEATURES": {}
+                },
+                "APP_SUPPORT": {},
+                "SYS_ADMIN": {},
+                "APP_USER": {}
+              }
+            },
+            "ROLES": {
+              "EDAX": {
+                "ACCT_MANAGERS": {}
+              }
+            },
+            "ACCOUNT_STATS": {
+              "ACCESS_TIME": {
+                "EDAX": {
+                  "AUTHENTICATION": "",
+                  "TIME": ""
+                }
+              },
+              "STORAGE": {
+                "FILE": 0,
+                "DATA": {
+                  "REALTIME": "",
+                  "FIRESTORE": ""
+                }
+              },
+              "TRAFFIC": {
+                "INTERNAL": 0,
+                "IN": {
+                  "FIRESTORE": "",
+                  "REALTIME": ""
+                },
+                "OUT": {
+                  "FIRESTORE": "",
+                  "REALTIME": ""
+                }
+              }
+            },
+            "ACCOUNT_PROFILES": {
+              "EDAX": {
+                "MEMBERSHIP": {
+                  "CANCELED_AT": "",
+                  "CREATED_AT": 0,
+                  "CUSTOMER_ID": "",
+                  "LICENSE_GRANTED": 1,
+                  "LICENSE_USED": 1,
+                  "PLAN": "",
+                  "PLAIN_ID": "",
+                  "PRICE_ID": "",
+                  "PRICE_PLAN": "",
+                  "STATUS": "ACTIVE",
+                  "TRIAL_END": ""
+                },
+                "PLAN_FEATURES": {
+                  "_firestore": {
+                    "projectId": "badixyz-99c0f"
+                  },
+                  "_path": {
+                    "segments": [
+                      "IREVA",
+                      "DEV_01",
+                      "EDAX",
+                      "PLANS"
+                    ]
+                  },
+                  "_converter": {}
+                }
+              }
+            },
+            "USER_PROFILE": {
+              "PHOTO": "",
+              "NICKNAME": "",
+              "MIDDLE_NAME": "",
+              "EMAIL_VERIFIED": false,
+              "CREATED_ON": "Tue, 21 Jan 2025 14:36:27 GMT",
+              "EMAIL": "eugene.han@ireva.com",
+              "PHONE_NUMBER": "1111111111111111111",
+              "ACCOUNT_NAME": "X",
+              "LAST_NAME": "Hanx",
+              "FIRST_NAME": "Eugenex",
+              "DISPLAY_NAME": "sdsdsd",
+              "AVATAR": "https://firebasestorage.googleapis.com/v0/b/badixyz-99c0f.appspot.com/o/IREVA%2FDEV_01%2FUSERS%2FaxDmmhB9sXQNh3JZZ991Yulrkpp1%2FDATA%2FEDAX%2FAVATAR%2F0%2F0?alt=media&token=ade7d88d-04f7-46a7-afba-0add96206318"
+            },
+            "FEATURES": {
+              "EDAX": {
+                "AD_FREE": false,
+                "DATA_SHARING": false,
+                "ENTITY_GROUPINGS": true,
+                "FREESTYLE_GROUPINGS": false,
+                "MANAGE_ACCOUNTS": true,
+                "MANAGE_CONTACTS": false,
+                "MANAGE_CREDENTIALS": true,
+                "MANAGE_GROUPS": false,
+                "MANAGE_USERS": false,
+                "MULTI_USERS": false,
+                "SEARCH": true
+              }
+            },
+            "SESSIONS": {
+              "SSO": {
+                "AUTH": {
+                  "FIREBASE": {
+                    "ID_TOKEN": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjMwYjIyMWFiNjU2MTdiY2Y4N2VlMGY4NDYyZjc0ZTM2NTIyY2EyZTQiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiTXkgRGV2IEFjY291bnQiLCJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vYmFkaXh5ei05OWMwZiIsImF1ZCI6ImJhZGl4eXotOTljMGYiLCJhdXRoX3RpbWUiOjE3NDI3MDg4NTYsInVzZXJfaWQiOiJheERtbWhCOXNYUU5oM0paWjk5MVl1bHJrcHAxIiwic3ViIjoiYXhEbW1oQjlzWFFOaDNKWlo5OTFZdWxya3BwMSIsImlhdCI6MTc0MjcwODg1NiwiZXhwIjoxNzQyNzEyNDU2LCJlbWFpbCI6ImV1Z2VuZS5oYW5AaXJldmEuY29tIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7ImVtYWlsIjpbImV1Z2VuZS5oYW5AaXJldmEuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.mq4pcrkDONohC1HSqHAa6qKIspg70So_wlxY8dKxbR69WTTIUI-0tyUON0yGGCJQ_qvGDo0N9e1MZbXgtGkYUvyOf8S-ZeN66vgnFBRU93E3KGj9g4-BsMaR9t-7IVFbrSszEH-i-qfAr5ewfLZ7o3PT3a56mCXNGnndCv_efpaj0mV8pvqwPY6AV0Cfbdgi3wTm5j3dZXY_NHOE2fd2pZveLuUhrQS6aIy1M0irerXpKgdUlh-p-sroy77R19UacUKhKEH1a4WVUatZHME5UuTnQBRkkaTdY0Yv0aEQBgxQ6fqorWg4ljDh7P3XZ0IUqhPh2RRjoBM3D-5NZ_JpfQ",
+                    "REFRESH_TOKEN": "AMf-vBxzmp-s5NZ2gGwelABPltvKlbdk-4GtpKWKAb_tuU7QUohK_42xoOawK_gBwghAQskSp7zgu1VLDVX6ezCGKkf8cFvftakRh91iHfz1_06ksS4k1-hXY5mxYDPQLXngvB9E762G78w3hQDLwTpmaMWRIFXMAdMaJGNVyDBl38yxOwmmAFPzH6dDSIAbxnWRZ4ocbJSdyK-ifr49pz7C_kKoApf45EQtvUlX6LKb9HLRgngPVQw"
+                  }
+                },
+                "APPS": {
+                  "EDAX": {
+                    "ID_TOKEN": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjMwYjIyMWFiNjU2MTdiY2Y4N2VlMGY4NDYyZjc0ZTM2NTIyY2EyZTQiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiTXkgRGV2IEFjY291bnQiLCJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vYmFkaXh5ei05OWMwZiIsImF1ZCI6ImJhZGl4eXotOTljMGYiLCJhdXRoX3RpbWUiOjE3NDI3MDg4NTYsInVzZXJfaWQiOiJheERtbWhCOXNYUU5oM0paWjk5MVl1bHJrcHAxIiwic3ViIjoiYXhEbW1oQjlzWFFOaDNKWlo5OTFZdWxya3BwMSIsImlhdCI6MTc0MjcwODg1NiwiZXhwIjoxNzQyNzEyNDU2LCJlbWFpbCI6ImV1Z2VuZS5oYW5AaXJldmEuY29tIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7ImVtYWlsIjpbImV1Z2VuZS5oYW5AaXJldmEuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.mq4pcrkDONohC1HSqHAa6qKIspg70So_wlxY8dKxbR69WTTIUI-0tyUON0yGGCJQ_qvGDo0N9e1MZbXgtGkYUvyOf8S-ZeN66vgnFBRU93E3KGj9g4-BsMaR9t-7IVFbrSszEH-i-qfAr5ewfLZ7o3PT3a56mCXNGnndCv_efpaj0mV8pvqwPY6AV0Cfbdgi3wTm5j3dZXY_NHOE2fd2pZveLuUhrQS6aIy1M0irerXpKgdUlh-p-sroy77R19UacUKhKEH1a4WVUatZHME5UuTnQBRkkaTdY0Yv0aEQBgxQ6fqorWg4ljDh7P3XZ0IUqhPh2RRjoBM3D-5NZ_JpfQ",
+                    "REFRESH_TOKEN": "AMf-vBxzmp-s5NZ2gGwelABPltvKlbdk-4GtpKWKAb_tuU7QUohK_42xoOawK_gBwghAQskSp7zgu1VLDVX6ezCGKkf8cFvftakRh91iHfz1_06ksS4k1-hXY5mxYDPQLXngvB9E762G78w3hQDLwTpmaMWRIFXMAdMaJGNVyDBl38yxOwmmAFPzH6dDSIAbxnWRZ4ocbJSdyK-ifr49pz7C_kKoApf45EQtvUlX6LKb9HLRgngPVQw"
+                  }
+                }
+              }
+            }
+          },
+          "createAccount": {
+            "ACCOUNTS": {
+              "EDAX": {
+                "APP_ADMIN": {
+                  "ROLES": {},
+                  "FEATURES": {}
+                },
+                "APP_SUPPORT": {},
+                "SYS_ADMIN": {},
+                "APP_USER": {}
+              }
+            },
+            "ROLES": {
+              "EDAX": {
+                "ACCT_MANAGERS": {}
+              }
+            },
+            "ACCOUNT_STATS": {
+              "ACCESS_TIME": {
+                "EDAX": {
+                  "AUTHENTICATION": "",
+                  "TIME": ""
+                }
+              },
+              "STORAGE": {
+                "FILE": 0,
+                "DATA": {
+                  "REALTIME": "",
+                  "FIRESTORE": ""
+                }
+              },
+              "TRAFFIC": {
+                "INTERNAL": 0,
+                "IN": {
+                  "FIRESTORE": "",
+                  "REALTIME": ""
+                },
+                "OUT": {
+                  "FIRESTORE": "",
+                  "REALTIME": ""
+                }
+              }
+            },
+            "USER_PROFILE": {
+              "EMAIL": "",
+              "PHOTO": "",
+              "CREATED_ON": {
+                "_seconds": 1735747583,
+                "_nanoseconds": 750000000
+              },
+              "LAST_NAME": "",
+              "FIRST_NAME": "",
+              "NICKNAME": "",
+              "MIDDLE_NAME": "",
+              "DISPLAY_NAME": "",
+              "EMAIL_VERIFIED": false,
+              "ACCOUNT_NAME": "",
+              "AVATAR": ""
+            },
+            "FEATURES": {},
+            "ACCOUNT_PROFILES": {
+              "EDAX": {
+                "PLAN_FEATURES": {
+                  "_firestore": {
+                    "projectId": "badixyz-99c0f"
+                  },
+                  "_path": {
+                    "segments": [
+                      "IREVA",
+                      "DEV_01",
+                      "EDAX",
+                      "PLANS"
+                    ]
+                  },
+                  "_converter": {}
+                },
+                "MEMBERSHIP": {
+                  "TRIAL_END": "",
+                  "STATUS": "[ACTIVE|SUSPENDED|EMAIL_VERIFY_PENDING|INACTIVE|DELETED]",
+                  "PLAN": "Individual Minimalist",
+                  "PLAN_ID": "INDIVIDUAL_MINIMALIST",
+                  "PRICE_ID": "price_freemium",
+                  "PRICE_PLAN": "Individual Minimalist Freemium",
+                  "LICENSE_GRANTED": 1,
+                  "LICENSE_USED": 1,
+                  "CUSTOMER_ID": "",
+                  "CREATED_AT": 0
+                }
+              }
+            }
+          },
+          "edaxUser": {},
+          "vkLeBchz2TV34UHCz1VsP9GC2973": {
+            "ACCOUNTS": {
+              "EDAX": {
+                "APP_ADMIN": {
+                  "ROLES": {},
+                  "FEATURES": {}
+                },
+                "APP_SUPPORT": {},
+                "SYS_ADMIN": {},
+                "APP_USER": {}
+              }
+            },
+            "ROLES": {
+              "EDAX": {
+                "ACCT_MANAGERS": {}
+              }
+            },
+            "ACCOUNT_STATS": {
+              "ACCESS_TIME": {
+                "EDAX": {
+                  "AUTHENTICATION": "",
+                  "TIME": ""
+                }
+              },
+              "STORAGE": {
+                "FILE": 0,
+                "DATA": {
+                  "REALTIME": "",
+                  "FIRESTORE": ""
+                }
+              },
+              "TRAFFIC": {
+                "INTERNAL": 0,
+                "IN": {
+                  "FIRESTORE": "",
+                  "REALTIME": ""
+                },
+                "OUT": {
+                  "FIRESTORE": "",
+                  "REALTIME": ""
+                }
+              }
+            },
+            "USER_PROFILE": {
+              "PHOTO": "",
+              "NICKNAME": "",
+              "MIDDLE_NAME": "",
+              "EMAIL_VERIFIED": false,
+              "CREATED_ON": "Thu, 20 Mar 2025 12:47:53 GMT",
+              "EMAIL": "3@b.com",
+              "AVATAR": "U",
+              "ACCOUNT_NAME": "Yofb",
+              "DISPLAY_NAME": "Yofb",
+              "FIRST_NAME": "yous",
+              "LAST_NAME": "yyys"
+            },
+            "ACCOUNT_PROFILES": {
+              "EDAX": {
+                "PLAN_FEATURES": {
+                  "_firestore": {
+                    "projectId": "badixyz-99c0f"
+                  },
+                  "_path": {
+                    "segments": [
+                      "IREVA",
+                      "DEV_01",
+                      "EDAX",
+                      "PLANS"
+                    ]
+                  },
+                  "_converter": {}
+                },
+                "MEMBERSHIP": {
+                  "TRIAL_END": "",
+                  "LICENSE_GRANTED": 1,
+                  "LICENSE_USED": 1,
+                  "STATUS": "EMAIL_VERIFY_PENDING",
+                  "CREATED_AT": 1742474879,
+                  "CREATED_DATE": 1742532764,
+                  "CUSTOMER_ID": "cus_RygqBcY9HouUtH",
+                  "SUBSCRIPTION_ID": "sub_1R4xZhD6IjOeZ3YQ8f81OaSF",
+                  "LAST_UPDATE_AT": 1742532772,
+                  "PLAN_ID": "INDIVIDUAL_FREEDOM",
+                  "PRICE_PLAN": "Individual Freedom Yearly",
+                  "PLAN": "Individual Freedom",
+                  "PRICE_ID": "price_1QxNN5D6IjOeZ3YQWQ4EuGve"
+                }
+              }
+            },
+            "FEATURES": {
+              "EDAX": {
+                "AD_FREE": false,
+                "SEARCH": true,
+                "MULTI_USERS": false,
+                "DATA_SHARING": false,
+                "FREESTYLE_GROUPINGS": false,
+                "ENTITY_GROUPINGS": true,
+                "MANAGE_ACCOUNTS": true,
+                "MANAGE_CREDENTIALS": true,
+                "MANAGE_CONTACTS": true,
+                "MANAGE_GROUPS": true,
+                "MANAGE_USERS": false
+              }
+            },
+            "SESSIONS": {
+              "SSO": {
+                "AUTH": {
+                  "FIREBASE": {
+                    "ID_TOKEN": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjMwYjIyMWFiNjU2MTdiY2Y4N2VlMGY4NDYyZjc0ZTM2NTIyY2EyZTQiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiQSIsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS9iYWRpeHl6LTk5YzBmIiwiYXVkIjoiYmFkaXh5ei05OWMwZiIsImF1dGhfdGltZSI6MTc0MjczMTYzOCwidXNlcl9pZCI6InZrTGVCY2h6MlRWMzRVSEN6MVZzUDlHQzI5NzMiLCJzdWIiOiJ2a0xlQmNoejJUVjM0VUhDejFWc1A5R0MyOTczIiwiaWF0IjoxNzQyNzMxNjM4LCJleHAiOjE3NDI3MzUyMzgsImVtYWlsIjoiM0BiLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyIzQGIuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.svK65Hxww84rED6avrCJOIo4nqlaZuze9mCXD57-WkD_ERI7lo_Vi2blOi9XEGWCJ33R_mwccQ37xmXC1ZAN1ucN8YoUCpipVfO-Hv48hqEjjXB23y27d7KvjotqVPDpbOY0NVtGOofoYVezi69VdlWeuNsavK9ppuTxcUWYA6h11fjvnO6yI1LOKyH1o0uNqXiqc1ewvwj7KUnnJ-I3hAWDar64zT8ek2GHllYTKb8NA6I9Kt7vmpiONWBzd-aF4UI7TRf-Dv5FzdsO7tkfJZ7DZ9TWr2D69JIQxZxi3TktWZqDh3Xm4rCI4UQYmciUN3Uh4QspepZaeMMHcQTrlQ",
+                    "REFRESH_TOKEN": "AMf-vBzQuHHqPiP8Pcb_59Eg3bqXGddq_MPmLC_7OV1fWopx1E6u_5cx1dHJlBycUr0pO0AH8iXSwGsQaTHne2BbdKvktDupN5T0Kb1NufDT5Z_VA5hLgexfKn3vtkUfn1pgBBLQIdq01k4nZjroq2kfJQWjaxPuVUpask427isfkS-llYwoxhP-adU6uzPFI0CV1U-WRHCA"
+                  }
+                },
+                "APPS": {
+                  "EDAX": {
+                    "ID_TOKEN": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjMwYjIyMWFiNjU2MTdiY2Y4N2VlMGY4NDYyZjc0ZTM2NTIyY2EyZTQiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiQSIsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS9iYWRpeHl6LTk5YzBmIiwiYXVkIjoiYmFkaXh5ei05OWMwZiIsImF1dGhfdGltZSI6MTc0MjczMTYzOCwidXNlcl9pZCI6InZrTGVCY2h6MlRWMzRVSEN6MVZzUDlHQzI5NzMiLCJzdWIiOiJ2a0xlQmNoejJUVjM0VUhDejFWc1A5R0MyOTczIiwiaWF0IjoxNzQyNzMxNjM4LCJleHAiOjE3NDI3MzUyMzgsImVtYWlsIjoiM0BiLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyIzQGIuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.svK65Hxww84rED6avrCJOIo4nqlaZuze9mCXD57-WkD_ERI7lo_Vi2blOi9XEGWCJ33R_mwccQ37xmXC1ZAN1ucN8YoUCpipVfO-Hv48hqEjjXB23y27d7KvjotqVPDpbOY0NVtGOofoYVezi69VdlWeuNsavK9ppuTxcUWYA6h11fjvnO6yI1LOKyH1o0uNqXiqc1ewvwj7KUnnJ-I3hAWDar64zT8ek2GHllYTKb8NA6I9Kt7vmpiONWBzd-aF4UI7TRf-Dv5FzdsO7tkfJZ7DZ9TWr2D69JIQxZxi3TktWZqDh3Xm4rCI4UQYmciUN3Uh4QspepZaeMMHcQTrlQ",
+                    "REFRESH_TOKEN": "AMf-vBzQuHHqPiP8Pcb_59Eg3bqXGddq_MPmLC_7OV1fWopx1E6u_5cx1dHJlBycUr0pO0AH8iXSwGsQaTHne2BbdKvktDupN5T0Kb1NufDT5Z_VA5hLgexfKn3vtkUfn1pgBBLQIdq01k4nZjroq2kfJQWjaxPuVUpask427isfkS-llYwoxhP-adU6uzPFI0CV1U-WRHCA"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "collections": {
+          "DATA": {
+            "document": {
+              "EDAX": {
+                "ORGANIZERS": {
+                  "USERS": {
+                    "0": {
+                      "data": {
+                        "fileSize": "1M",
+                        "fileType": "users"
+                      },
+                      "droppable": true,
+                      "id": "Users",
+                      "index": 1,
+                      "parent": "0",
+                      "text": "Users"
+                    }
+                  },
+                  "CONTACTS": {
+                    "0": {
+                      "data": {
+                        "fileSize": "1M",
+                        "fileType": "contacts"
+                      },
+                      "droppable": true,
+                      "id": "Contacts",
+                      "index": 1,
+                      "parent": "0",
+                      "text": "Contacts"
+                    }
+                  },
+                  "GROUPS": {
+                    "0": {
+                      "data": {
+                        "fileSize": "1M",
+                        "fileType": "groups"
+                      },
+                      "droppable": true,
+                      "index": 1,
+                      "parent": "0",
+                      "text": "Groups",
+                      "id": "Groups"
+                    }
+                  },
+                  "CREDENTIALS": {
+                    "0": {
+                      "data": {
+                        "fileSize": "1M",
+                        "fileType": "credentials"
+                      },
+                      "droppable": true,
+                      "id": "Credentials",
+                      "index": 1,
+                      "parent": "0",
+                      "text": "Credentials"
+                    },
+                    "13d56580-30dd-4600-9574-7bc5c607aecd": {
+                      "droppable": false,
+                      "parent": "Credentials",
+                      "data": {
+                        "recRef": "13d56580-30dd-4600-9574-7bc5c607aecd",
+                        "fileType": "password",
+                        "urlImage": ""
+                      },
+                      "id": "13d56580-30dd-4600-9574-7bc5c607aecd",
+                      "text": "g",
+                      "index": 1
+                    },
+                    "77c23a10-434e-4497-8f6d-9deb82eb49e3": {
+                      "droppable": false,
+                      "parent": "Credentials",
+                      "index": 0,
+                      "id": "77c23a10-434e-4497-8f6d-9deb82eb49e3",
+                      "text": "b",
+                      "data": {
+                        "recRef": "77c23a10-434e-4497-8f6d-9deb82eb49e3",
+                        "fileType": "password",
+                        "urlImage": "U"
+                      }
+                    }
+                  },
+                  "ACCOUNTS": {
+                    "0": {
+                      "data": {
+                        "fileSize": "1M",
+                        "fileType": "accounts"
+                      },
+                      "droppable": true,
+                      "id": "Accounts",
+                      "index": 1,
+                      "text": "Accounts",
+                      "parent": "0"
+                    },
+                    "28ec29a2-d58a-4d4b-aa30-935e830a5e25": {
+                      "droppable": false,
+                      "parent": "Accounts",
+                      "data": {
+                        "recRef": "28ec29a2-d58a-4d4b-aa30-935e830a5e25",
+                        "fileType": "account",
+                        "urlImage": ""
+                      },
+                      "index": 0,
+                      "id": "28ec29a2-d58a-4d4b-aa30-935e830a5e25",
+                      "text": "asssdsdfsadf"
+                    }
+                  },
+                  "TAGS": {
+                    "Q2hhc2U=": {
+                      "TAG": "Chase",
+                      "13d56580-30dd-4600-9574-7bc5c607aecd": {
+                        "t": "C",
+                        "n": "g"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "collections": {
+              "ACCOUNTS": {
+                "document": {
+                  "28ec29a2-d58a-4d4b-aa30-935e830a5e25": {
+                    "name": "YXNzc2RzZGZzYWRm",
+                    "accountNumber": null,
+                    "pin": null,
+                    "accountBackupCodes": "",
+                    "addresses": {},
+                    "tags": {},
+                    "accountNoteEntries": {},
+                    "note": null,
+                    "url": "",
+                    "urlImage": "",
+                    "id": "MjhlYzI5YTItZDU4YS00ZDRiLWFhMzAtOTM1ZTgzMGE1ZTI1"
+                  }
+                },
+                "collections": {}
+              },
+              "CREDENTIALS": {
+                "document": {
+                  "13d56580-30dd-4600-9574-7bc5c607aecd": {
+                    "name": "Zw==",
+                    "password": null,
+                    "tags": {
+                      "0": "Q2hhc2U="
+                    },
+                    "note": null,
+                    "additionalInformation": {},
+                    "challengePrompt": null,
+                    "challenge": null,
+                    "useChallenge": null,
+                    "secureKey": null,
+                    "securedPassword": "",
+                    "url": "",
+                    "urlImage": "",
+                    "id": "MTNkNTY1ODAtMzBkZC00NjAwLTk1NzQtN2JjNWM2MDdhZWNk"
+                  },
+                  "77c23a10-434e-4497-8f6d-9deb82eb49e3": {
+                    "name": "Yg==",
+                    "password": null,
+                    "tags": {},
+                    "note": "PHA+YmM8L3A+",
+                    "additionalInformation": {},
+                    "challengePrompt": null,
+                    "challenge": null,
+                    "useChallenge": null,
+                    "secureKey": null,
+                    "securedPassword": "",
+                    "url": "aHR0cDovL3d3dy55YWhvby5jb20=",
+                    "urlImage": "VQ==",
+                    "id": "NzdjMjNhMTAtNDM0ZS00NDk3LThmNmQtOWRlYjgyZWI0OWUz"
+                  }
+                },
+                "collections": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
