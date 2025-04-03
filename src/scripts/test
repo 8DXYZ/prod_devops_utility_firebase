@@ -13,7 +13,50 @@ IREVA ENV
 /COM/IREVA/EDAX/PROD
 
 node ./src/scripts/runMigration.js export /IREVA/DEV_01 test.json 
+node ./src/scripts/runMigration.js import GOLD_SCHEMA_0.0.0.json /COM/IREVA/SCHEMA/EDAX/GOLD/0_0_0
 node ./src/scripts/runMigration.js import GOLD_SCHEMA_0.0.0.json /COM/IREVA/EDAX/DEV/EH/0_0_0  
+
+
+Development;    DEV     dev.e-dax.com
+Integration:    INT     int.e-dax.com
+Testing:        TEST    test.e-dax.com
+Demo:           DEMO    demo.e-dax.com
+
+node ./src/scripts/runMigration.js import GOLD_SCHEMA_0.0.0.json /COM/IREVA/EDAX/DEV/0_0_0/0 
 node ./src/scripts/runMigration.js import GOLD_SCHEMA_0.0.0.json /COM/IREVA/EDAX/TEST/0_0_0/0  
 node ./src/scripts/runMigration.js import GOLD_SCHEMA_0.0.0.json /COM/IREVA/EDAX/INT/0_0_0/0 
-node ./src/scripts/runMigration.js import GOLD_SCHEMA_0.0.0.json /COM/IREVA/SCHEMA/EDAX/GOLD/0_0_0
+node ./src/scripts/runMigration.js import GOLD_SCHEMA_0.0.0.json /COM/IREVA/EDAX/DEMO/0_0_0/0 
+
+
+//update new firebase project information - jupia project
+
+Staging:        STAGING     stg.e-dax.com
+Production:     PORD        www.e-dax.com
+
+node ./src/scripts/runMigration.js import GOLD_SCHEMA_0.0.0.json /COM/IREVA/EDAX/STG/0_0_0/0
+node ./src/scripts/runMigration.js import GOLD_SCHEMA_0.0.0.json /COM/IREVA/EDAX/PROD 
+
+
+
+
+
+
+
+
+
+Restful Servce Bacekd Support
+
+done c:\Workspace\e-dax-services\node_modules\@8d-xyz\bk-common_util-lib 
+done c:\Workspace\e-dax-services\node_modules\@8d-xyz\bk-express_restful-lib    
+done c:\Workspace\e-dax-services\node_modules\@8d-xyz\bk-firebase_connect-lib 
+done c:\Workspace\e-dax-services\node_modules\@8d-xyz\bk-firebase_restful-lib
+done c:\Workspace\e-dax-services\node_modules\@8d-xyz\bk-firebase_common_util-lib 
+    "@8d-xyz/bk-common_util-lib": "^0.0.12",
+    "@8d-xyz/bk-express_restful-lib": "^0.0.12",
+    "@8d-xyz/bk-firebase_connect-lib": "^0.0.12",
+    "@8d-xyz/bk-firebase_restful-lib": "^0.0.12",
+
+
+    yarn unlink "@8d-xyz/bk-firebase_restful-lib"
+    yarn unlink "@8d-xyz/bk-firebase_connect-lib"
+    yarn unlink "@8d-xyz/bk-express_restful-lib"
