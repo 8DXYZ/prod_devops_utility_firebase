@@ -11,30 +11,30 @@ IREVA ENV
 =============================================================================================
 ======         Created 8-D Development Environment For IREVA             ====================
 
-
-node ./src/scripts/runMigration.js export /IREVA/DEV_01 GOLD_SCHEMA_0.0.0-1.json  # this is from baseline pre dev env.
-node ./src/scripts/runMigration.js import GOLD_SCHEMA_0.0.0-2.json /COM/IREVA/SCHEMA/APPS/GOLD/0_0_0
-node ./src/scripts/runMigration.js import GOLD_SCHEMA_0.0.0-2.json /COM/IREVA/SCHEMA/EDAX/GOLD/0_0_0
+node ./src/scripts/runMigration.js export /COM/IREVA/APPS/DEV/0_0_0/0 GOLD_SCHEMA_0.0.0-3.json 
+#node ./src/scripts/runMigration.js export /IREVA/DEV_01 GOLD_SCHEMA_0.0.0-1.json  # this is from baseline pre dev env.
+node ./src/scripts/runMigration.js import GOLD_SCHEMA_0.0.0-3.json /COM/IREVA/SCHEMA/APPS/GOLD/0_0_0
+node ./src/scripts/runMigration.js import GOLD_SCHEMA_0.0.0-3.json /COM/IREVA/SCHEMA/EDAX/GOLD/0_0_0
 
 =====================  create Cloud Envs ====================================================
 
 ============================   Developers Env =================================================
-node ./src/scripts/runMigration.js import GOLD_SCHEMA_0.0.0-1.json /COM/IREVA/APPS/DEV/EH/0_0_0
+node ./src/scripts/runMigration.js import GOLD_SCHEMA_0.0.0-3.json /COM/IREVA/APPS/DEV/EH/0_0_0
 
 ===================== Dev & Test Env ======================================================
 Development;    DEV     dev.e-dax.com
 Integration:    INT     int.e-dax.com
 Testing:        TEST    test.e-dax.com
 
-node ./src/scripts/runMigration.js import GOLD_SCHEMA_0.0.0-2.json /COM/IREVA/APPS/DEV/EH/0_0_0  
-node ./src/scripts/runMigration.js import GOLD_SCHEMA_0.0.0-2.json /COM/IREVA/APPS/DEV/0_0_0/0 
-node ./src/scripts/runMigration.js import GOLD_SCHEMA_0.0.0-2.json /COM/IREVA/APPS/TEST/0_0_0/0  
-node ./src/scripts/runMigration.js import GOLD_SCHEMA_0.0.0-2.json /COM/IREVA/APPS/INT/0_0_0/0 
+node ./src/scripts/runMigration.js import GOLD_SCHEMA_0.0.0-3.json /COM/IREVA/APPS/DEV/EH/0_0_0  
+node ./src/scripts/runMigration.js import GOLD_SCHEMA_0.0.0-3.json /COM/IREVA/APPS/DEV/0_0_0/0 
+node ./src/scripts/runMigration.js import GOLD_SCHEMA_0.0.0-3.json /COM/IREVA/APPS/TEST/0_0_0/0  
+node ./src/scripts/runMigration.js import GOLD_SCHEMA_0.0.0-3.json /COM/IREVA/APPS/INT/0_0_0/0 
 
 ===================== Demo Env ======================================================
 Demo:           DEMO    demo.e-dax.com
 
-node ./src/scripts/runMigration.js import GOLD_SCHEMA_0.0.0-2.json /COM/IREVA/APPS/DEMO/0_0_0/0 
+node ./src/scripts/runMigration.js import GOLD_SCHEMA_0.0.0-3.json /COM/IREVA/APPS/DEMO/0_0_0/0 
 
 
 
@@ -47,8 +47,8 @@ node ./src/scripts/runMigration.js import GOLD_SCHEMA_0.0.0-2.json /COM/IREVA/AP
 Staging:        STAGING     stg.e-dax.com
 Production:     PORD        www.e-dax.com
 
-node ./src/scripts/runMigration.js import GOLD_SCHEMA_0.0.0-2.json /COM/IREVA/APPS/STG/0_0_0/0 
-node ./src/scripts/runMigration.js import GOLD_SCHEMA_0.0.0-2.json /COM/IREVA/APPS/PROD 
+node ./src/scripts/runMigration.js import GOLD_SCHEMA_0.0.0-3.json /COM/IREVA/APPS/STG/0_0_0/0 
+node ./src/scripts/runMigration.js import GOLD_SCHEMA_0.0.0-3.json /COM/IREVA/APPS/PROD 
 
 
 

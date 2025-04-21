@@ -1,0 +1,654 @@
+{
+  "/COM/IREVA/APPS/DEV/0_0_0/0": {
+    "fields": {
+      "USAGE_STATS": {
+        "OVERALL": {
+          "STORAGE": {
+            "DATA": {
+              "REALTIME": "",
+              "FIRESTORE": ""
+            },
+            "FILE": ""
+          },
+          "TRAFFIC": {
+            "ACCESS_TIME": {
+              "AUTHENTICATION": "",
+              "TIME": ""
+            },
+            "IN": {
+              "REALTIME": "",
+              "FIRESTORE": ""
+            },
+            "OUT": {
+              "REALTIME": "",
+              "FIRESTORE": ""
+            }
+          },
+          "ACCESS_TIME": ""
+        },
+        "EDAX": {
+          "STORAGE": {
+            "REALTIME": "",
+            "FIRESTORE": "",
+            "FILE": ""
+          },
+          "TRAFFIC": {
+            "IN": {
+              "REALTIME": "",
+              "FIRESTORE": ""
+            },
+            "INTERNAL": "",
+            "OUT": {
+              "REALTIME": "",
+              "FIRESTORE": ""
+            }
+          },
+          "ACCESS_TIME": {
+            "AUTHENTICATION": "",
+            "TIME": ""
+          }
+        }
+      },
+      "USERBASE": {
+        "EDAX": "",
+        "TKM": "",
+        "AIDEMI": ""
+      },
+      "VERSION": "0.0.0"
+    },
+    "collections": {
+      "EDAX": {
+        "fields": {},
+        "collections": {
+          "ACCOUNT_TYPES": {
+            "fields": {
+              "ADMINISTRATOR": {},
+              "ACCOUNT_USER": {}
+            },
+            "collections": {}
+          },
+          "FEATURES": {
+            "fields": {
+              "AD_FREE": "",
+              "SHARE_ACCESS": "",
+              "MANAGE_CREDENTIALS": "",
+              "MULTI_USERS": "",
+              "SEARCH": "",
+              "FREESTYLE_GROUPINGS": "",
+              "MANAGE_ACCOUNTS": "",
+              "MANAGE_CONTACTS": "",
+              "MANAGE_GROUPS": "",
+              "ENTITY_GROUPINGS": "",
+              "MANAGE_USERS": ""
+            },
+            "collections": {}
+          },
+          "META": {
+            "fields": {
+              "APPLICATION": {
+                "SEO_URL": "https://www.e-dax.com",
+                "COPYRIGHT_LABEL": "E-DAX. All rights reserved.",
+                "SEO_IMG": "https://www.e-dax.com/e-dax.png",
+                "CONTACT_EMAIL": "dev.team@e-dax.com",
+                "ENV_LABEL": "Development",
+                "ENV": "DEV"
+              },
+              "PRODUCT_INFO": {
+                "IFM": {
+                  "INVOICE_PRODCUT_CODE": "price_1QxO1QD6IjOeZ3YQRW43gaYK",
+                  "PRICE": {
+                    "CURRENCY": "$6.25",
+                    "UNIT": "month",
+                    "PRICE": ""
+                  },
+                  "DESCRIPTION": "Individual Freedom Monthly Subscription Plan",
+                  "PLAN_ID": "INDIVIDUAL_FREEDOM",
+                  "TITLE": "Individual Freedom",
+                  "PRICE_PLAN": "Individual Freedom Monthly",
+                  "PLAN": "Individual Freedom",
+                  "OPTIONS": {
+                    "0": {
+                      "INFO": "Manage Credentials",
+                      "ICON": "CheckIcon"
+                    },
+                    "1": {
+                      "INFO": "Manage Accounts",
+                      "ICON": "CheckIcon"
+                    },
+                    "2": {
+                      "INFO": "Manage Contacts",
+                      "ICON": "CheckIcon"
+                    },
+                    "3": {
+                      "INFO": "Manage Groups",
+                      "ICON": "CheckIcon"
+                    },
+                    "4": {
+                      "INFO": "Searches",
+                      "ICON": "CheckIcon"
+                    },
+                    "5": {
+                      "INFO": "Data Sharing",
+                      "STROKEWIDTH": "2.5",
+                      "ICON": "MinusCircleIcon"
+                    }
+                  }
+                },
+                "IFY": {
+                  "INVOICE_PRODCUT_CODE": "price_1QxNN5D6IjOeZ3YQWQ4EuGve",
+                  "PRICE": {
+                    "CURRENCY": "$60",
+                    "UNIT": "year ($5/month)",
+                    "PRICE": ""
+                  },
+                  "DESCRIPTION": "Individual Freedom Yearly Subscription Plan",
+                  "PLAN_ID": "INDIVIDUAL_FREEDOM",
+                  "TITLE": "Individual Freedom",
+                  "PRICE_PLAN": "Individual Freedom Yearly",
+                  "PLAN": "Individual Freedom",
+                  "OPTIONS": {
+                    "0": {
+                      "INFO": "Manage Credentials",
+                      "ICON": "CheckIcon"
+                    },
+                    "1": {
+                      "INFO": "Manage Accounts",
+                      "ICON": "CheckIcon"
+                    },
+                    "2": {
+                      "INFO": "Manage Contacts",
+                      "ICON": "CheckIcon"
+                    },
+                    "3": {
+                      "INFO": "Manage Groups",
+                      "ICON": "CheckIcon"
+                    },
+                    "4": {
+                      "INFO": "Searches",
+                      "ICON": "CheckIcon"
+                    },
+                    "5": {
+                      "STROKEWIDTH": "2.5",
+                      "INFO": "Data Sharing",
+                      "ICON": "MinusCircleIcon"
+                    }
+                  }
+                },
+                "IMF": {
+                  "INVOICE_PRODCUT_CODE": "price_freemium",
+                  "PRICE": {
+                    "CURRENCY": "$",
+                    "UNIT": "month",
+                    "PRICE": "0"
+                  },
+                  "PLAN_ID": " INDIVIDUAL_MINALIST",
+                  "TITLE": "Individual Minimalist",
+                  "PRICE_PLAN": "Individual Minimalist Freemium",
+                  "PLAN": "Individual Minimalist",
+                  "DESCRIPTION": "Freemium Subscription Plan",
+                  "OPTIONS": {
+                    "0": {
+                      "INFO": "Manage Credentials",
+                      "ICON": "CheckIcon"
+                    },
+                    "1": {
+                      "INFO": "Manage Accounts",
+                      "ICON": "CheckIcon"
+                    },
+                    "3": {
+                      "STROKEWIDTH": "2.5",
+                      "INFO": "Manage Contacts",
+                      "ICON": "MinusCircleIcon"
+                    },
+                    "4": {
+                      "STROKEWIDTH": "2.5",
+                      "INFO": "Manage Groups",
+                      "ICON": "MinusCircleIcon"
+                    },
+                    "5": {
+                      "INFO": "Searches",
+                      "ICON": "CheckIcon"
+                    },
+                    "6": {
+                      "STROKEWIDTH": "2.5",
+                      "INFO": "Data Sharing",
+                      "ICON": "MinusCircleIcon"
+                    }
+                  }
+                },
+                "IPM": {
+                  "INVOICE_PRODCUT_CODE": "price_1QxMylD6IjOeZ3YQBVsHnVI2",
+                  "PRICE": {
+                    "CURRENCY": "$4",
+                    "UNIT": "month",
+                    "PRICE": ""
+                  },
+                  "PLAN_ID": "INDIVIDUAL_PLUS",
+                  "TITLE": "Individual Plus",
+                  "PRICE_PLAN": "Individual Plus Monthly",
+                  "PLAN": "Individual Plus",
+                  "DESCRIPTION": "Individual Plus Monthly Subscription Plan",
+                  "OPTIONS": {
+                    "0": {
+                      "INFO": "Manage Credentials",
+                      "ICON": "CheckIcon"
+                    },
+                    "1": {
+                      "INFO": "Manage Accounts",
+                      "ICON": "CheckIcon"
+                    },
+                    "2": {
+                      "INFO": "Manage Contacts",
+                      "ICON": "CheckIcon"
+                    },
+                    "3": {
+                      "STROKEWIDTH": "2.5",
+                      "INFO": "Manage Groups",
+                      "ICON": "MinusCircleIcon"
+                    },
+                    "4": {
+                      "INFO": "Searches",
+                      "ICON": "CheckIcon"
+                    },
+                    "5": {
+                      "STROKEWIDTH": "2.5",
+                      "INFO": "Data Sharing",
+                      "ICON": "MinusCircleIcon"
+                    }
+                  }
+                },
+                "IPY": {
+                  "INVOICE_PRODCUT_CODE": "price_1QxMUWD6IjOeZ3YQHkYjKPrV",
+                  "PRICE": {
+                    "CURRENCY": "$36",
+                    "UNIT": "year ($3/month)",
+                    "PRICE": ""
+                  },
+                  "DESCRIPTION": "Individual Plus Yearly Subscription Plan",
+                  "PLAN_ID": "INDIVIDUAL_PLUS",
+                  "TITLE": "Individual Plus",
+                  "PRICE_PLAN": "Individual Plus Yearly",
+                  "PLAN": "Individual Plus",
+                  "OPTIONS": {
+                    "0": {
+                      "INFO": "Manage Credentials",
+                      "ICON": "CheckIcon"
+                    },
+                    "1": {
+                      "INFO": "Manage Accounts",
+                      "ICON": "CheckIcon"
+                    },
+                    "2": {
+                      "INFO": "Manage Contacts",
+                      "ICON": "CheckIcon"
+                    },
+                    "3": {
+                      "STROKEWIDTH": "2.5",
+                      "INFO": "Manage Groups",
+                      "ICON": "MinusCircleIcon"
+                    },
+                    "4": {
+                      "INFO": "Searches",
+                      "ICON": "CheckIcon"
+                    },
+                    "5": {
+                      "STROKEWIDTH": "2.5",
+                      "INFO": "Data Sharing",
+                      "ICON": "MinusCircleIcon"
+                    }
+                  }
+                }
+              }
+            },
+            "collections": {}
+          },
+          "PLANS": {
+            "fields": {
+              "INDIVIDUAL_PLUS": {
+                "FEATURES": {
+                  "DATA_SHARING": false,
+                  "AD_FREE": false,
+                  "MANAGE_CREDENTIALS": true,
+                  "MULTI_USERS": false,
+                  "SEARCH": true,
+                  "FREESTYLE_GROUPINGS": false,
+                  "MANAGE_ACCOUNTS": true,
+                  "MANAGE_CONTACTS": true,
+                  "MANAGE_GROUPS": false,
+                  "ENTITY_GROUPINGS": true,
+                  "MANAGE_USERS": false
+                }
+              },
+              "INDIVIDUAL_MINIMALIST": {
+                "FEATURES": {
+                  "AD_FREE": false,
+                  "DATA_SHARE": false,
+                  "MANAGE_CREDENTIALS": true,
+                  "MULTI_USERS": false,
+                  "SEARCH": true,
+                  "FREESTYLE_GROUPINGS": false,
+                  "MANAGE_ACCOUNTS": true,
+                  "MANAGE_CONTACTS": false,
+                  "MANAGE_GROUPS": false,
+                  "ENTITY_GROUPINGS": true,
+                  "MANAGE_USERS": false
+                }
+              },
+              "INDIVIDUAL_FREEDOM": {
+                "FEATURES": {
+                  "DATA_SHARING": false,
+                  "AD_FREE": false,
+                  "MANAGE_CREDENTIALS": true,
+                  "MULTI_USERS": false,
+                  "SEARCH": true,
+                  "FREESTYLE_GROUPINGS": false,
+                  "MANAGE_ACCOUNTS": true,
+                  "MANAGE_CONTACTS": true,
+                  "MANAGE_GROUPS": true,
+                  "ENTITY_GROUPINGS": true,
+                  "MANAGE_USERS": false
+                }
+              }
+            },
+            "collections": {}
+          },
+          "ROLES": {
+            "fields": {
+              "OWNER": {},
+              "CLIENT_ADMIN": {},
+              "ADMIN_SUPPORT": {},
+              "ADMIN": {},
+              "USER": {}
+            },
+            "collections": {}
+          }
+        }
+      },
+      "OPERATIONS": {
+        "fields": {},
+        "collections": {
+          "EDAX": {
+            "fields": {
+              "NOTES": {
+                "ANNOUNCEMENT": {
+                  "STATE": [
+                    "RUNNING",
+                    "OFF"
+                  ]
+                },
+                "STATUS": [
+                  "ACTIVE",
+                  "MAINTENANCE",
+                  "SUSPEND"
+                ],
+                "SERVERITY_TYPE": [
+                  "info",
+                  "warning",
+                  "error",
+                  "success"
+                ]
+              },
+              "APPLICATION": {
+                "PORT": "8080",
+                "RUN_MODE": "DEBUG",
+                "ROUTE_PAGES": [
+                  {
+                    "PATH": "/*",
+                    "PAGE": "LandingU"
+                  },
+                  {
+                    "PAGE": "LandingU",
+                    "PATH": "/landing_u"
+                  },
+                  {
+                    "PAGE": "LandingO",
+                    "PATH": "/landing_o"
+                  },
+                  {
+                    "PAGE": "Splash",
+                    "PATH": "/splash"
+                  }
+                ],
+                "STATUS": "ACTIVE",
+                "AUTHORIZATION_REQUIRED": true,
+                "ANNOUNCEMENT": {
+                  "MESSAGE": "We are launching our new product next week! Stay tuned.",
+                  "TITLE": "Important Update",
+                  "SEVERITY": "info",
+                  "STATE": "RUNNING"
+                }
+              }
+            },
+            "collections": {
+              "SUPPORTS": {
+                "fields": {},
+                "collections": {
+                  "A": {
+                    "fields": {},
+                    "collections": {}
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "TKM": {
+        "fields": {},
+        "collections": {
+          "CLIENT_TOKENS": {
+            "fields": {
+              "ce72093c-090a-4ef7-9a99-7c3120dd03b4": {
+                "APP_ID": "a928db69-6380-41d4-965d-354e6c5920db",
+                "PERMISSIONS": {},
+                "STATUS": "ACTIVE",
+                "DESCRIPTION": "",
+                "ROLES": {},
+                "NOTE": "",
+                "CREATED_ON": {
+                  "_nanoseconds": 293000000,
+                  "_seconds": 1735588913
+                },
+                "EXPIRED_ON": {
+                  "_nanoseconds": 22000000,
+                  "_seconds": 1767168141
+                },
+                "APP_TOKEN": "d671f141-3056-4b72-b614-2b4a66020a9d",
+                "APP_KEY": "d762b93c-d45a-4efa-ad06-f0c20e43814a"
+              }
+            },
+            "collections": {}
+          },
+          "SYSTEM_APPS": {
+            "fields": {
+              "APP_KEYS": {
+                "1738dea6-a082-40d6-a693-3ae536a0d62": {
+                  "0_0_0": "7ff6244b-129b-4f62-ab95-dd8bee2cae2b"
+                }
+              },
+              "APPS": {
+                "EDAX": {
+                  "SYSTEM_APP_ID": "1738dea6-a082-40d6-a693-3ae536a0d62",
+                  "CREATED_ON": {
+                    "_nanoseconds": 744000000,
+                    "_seconds": 1735588734
+                  },
+                  "SYSTEM_APP_NAME": "EDAX"
+                }
+              }
+            },
+            "collections": {}
+          }
+        }
+      },
+      "USERS": {
+        "fields": {},
+        "collections": {
+          "createAccount": {
+            "fields": {
+              "ACCOUNT_STATS": {
+                "STORAGE": {
+                  "DATA": {
+                    "REALTIME": "",
+                    "FIRESTORE": ""
+                  },
+                  "FILE": 0
+                },
+                "TRAFFIC": {
+                  "IN": {
+                    "REALTIME": "",
+                    "FIRESTORE": ""
+                  },
+                  "INTERNAL": 0,
+                  "OUT": {
+                    "REALTIME": "",
+                    "FIRESTORE": ""
+                  }
+                },
+                "ACCESS_TIME": {
+                  "EDAX": {
+                    "AUTHENTICATION": "",
+                    "TIME": ""
+                  }
+                }
+              },
+              "ACCOUNTS": {
+                "EDAX": {
+                  "APP_ADMIN": {
+                    "ROLES": {},
+                    "FEATURES": {}
+                  },
+                  "SYS_ADMIN": {},
+                  "APP_SUPPORT": {},
+                  "APP_USER": {}
+                }
+              },
+              "ROLES": {
+                "EDAX": {
+                  "ACCT_MANAGERS": {}
+                }
+              },
+              "USER_PROFILE": {
+                "EMAIL_VERIFIED": false,
+                "ACCOUNT_NAME": "",
+                "NICKNAME": "",
+                "CREATED_ON": {
+                  "_nanoseconds": 750000000,
+                  "_seconds": 1735747583
+                },
+                "MIDDLE_NAME": "",
+                "PHOTO": "",
+                "AVATAR": "",
+                "EMAIL": "",
+                "LAST_NAME": "",
+                "DISPLAY_NAME": "",
+                "FIRST_NAME": ""
+              },
+              "FEATURES": {},
+              "ACCOUNT_PROFILES": {
+                "EDAX": {
+                  "MEMBERSHIP": {
+                    "STATUS": "[ACTIVE|SUSPENDED|EMAIL_VERIFY_PENDING|INACTIVE|DELETED]",
+                    "LICENSE_GRANTED": 1,
+                    "TRIAL_END": "",
+                    "CREATED_AT": 0,
+                    "CUSTOMER_ID": "",
+                    "PLAN_ID": "INDIVIDUAL_MINIMALIST",
+                    "LICENSE_USED": 1,
+                    "PRICE_PLAN": "Individual Minimalist Freemium",
+                    "PLAN": "Individual Minimalist",
+                    "PRICE_ID": "price_freemium"
+                  }
+                }
+              }
+            },
+            "collections": {}
+          },
+          "edaxUser": {
+            "fields": {},
+            "collections": {
+              "DATA": {
+                "fields": {},
+                "collections": {
+                  "EDAX": {
+                    "fields": {
+                      "ORGANIZERS": {
+                        "CONTACTS": {
+                          "0": {
+                            "droppable": true,
+                            "parent": "0",
+                            "data": {
+                              "fileSize": "1M",
+                              "fileType": "contacts"
+                            },
+                            "index": 1,
+                            "id": "Contacts",
+                            "text": "Contacts"
+                          }
+                        },
+                        "CREDENTIALS": {
+                          "0": {
+                            "droppable": true,
+                            "parent": "0",
+                            "data": {
+                              "fileSize": "1M",
+                              "fileType": "credentials"
+                            },
+                            "index": 1,
+                            "id": "Credentials",
+                            "text": "Credentials"
+                          }
+                        },
+                        "GROUPS": {
+                          "0": {
+                            "droppable": true,
+                            "parent": "0",
+                            "data": {
+                              "fileSize": "1M",
+                              "fileType": "groups"
+                            },
+                            "index": 1,
+                            "id": "Groups",
+                            "text": "Groups"
+                          }
+                        },
+                        "ACCOUNTS": {
+                          "0": {
+                            "droppable": true,
+                            "parent": "0",
+                            "data": {
+                              "fileSize": "1M",
+                              "fileType": "accounts"
+                            },
+                            "index": 1,
+                            "id": "Accounts",
+                            "text": "Accounts"
+                          }
+                        },
+                        "USERS": {
+                          "0": {
+                            "droppable": true,
+                            "parent": "0",
+                            "data": {
+                              "fileSize": "1M",
+                              "fileType": "users"
+                            },
+                            "index": 1,
+                            "id": "Users",
+                            "text": "Users"
+                          }
+                        },
+                        "TAGS": {}
+                      }
+                    },
+                    "collections": {}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
