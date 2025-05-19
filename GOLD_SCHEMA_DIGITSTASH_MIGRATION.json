@@ -97,7 +97,7 @@
                 "IFM": {
                   "INVOICE_PRODCUT_CODE": "price_1QxO1QD6IjOeZ3YQRW43gaYK",
                   "PRICE": {
-                    "CURRENCY": "$6.25",
+                    "CURRENCY": "$12.00",
                     "UNIT": "month",
                     "PRICE": ""
                   },
@@ -131,17 +131,21 @@
                       "INFO": "Data Sharing",
                       "STROKEWIDTH": "2.5",
                       "ICON": "MinusCircleIcon"
+                    },
+                    "6": {
+                      "INFO": "Entry Limit (700)",
+                      "ICON": "CheckIcon"
                     }
                   }
                 },
                 "IFY": {
                   "INVOICE_PRODCUT_CODE": "price_1QxNN5D6IjOeZ3YQWQ4EuGve",
                   "PRICE": {
-                    "CURRENCY": "$60",
-                    "UNIT": "year ($5/month)",
+                    "CURRENCY": "$120",
+                    "UNIT": "Annual (2 month free)",
                     "PRICE": ""
                   },
-                  "DESCRIPTION": "Individual Freedom Yearly Subscription Plan",
+                  "DESCRIPTION": "Individual Freedom Annual Subscription Plan",
                   "PLAN_ID": "INDIVIDUAL_FREEDOM",
                   "TITLE": "Individual Freedom",
                   "PRICE_PLAN": "Individual Freedom Yearly",
@@ -171,6 +175,10 @@
                       "STROKEWIDTH": "2.5",
                       "INFO": "Data Sharing",
                       "ICON": "MinusCircleIcon"
+                    },
+                     "6": {
+                      "INFO": "Entry Limit (700)",
+                      "ICON": "CheckIcon"
                     }
                   }
                 },
@@ -181,7 +189,7 @@
                     "UNIT": "month",
                     "PRICE": "0"
                   },
-                  "PLAN_ID": " INDIVIDUAL_MINALIST",
+                  "PLAN_ID": "INDIVIDUAL_MINALIST",
                   "TITLE": "Individual Minimalist",
                   "PRICE_PLAN": "Individual Minimalist Freemium",
                   "PLAN": "Individual Minimalist",
@@ -195,31 +203,35 @@
                       "INFO": "Manage Accounts",
                       "ICON": "CheckIcon"
                     },
-                    "3": {
+                    "2": {
                       "STROKEWIDTH": "2.5",
                       "INFO": "Manage Contacts",
                       "ICON": "MinusCircleIcon"
                     },
-                    "4": {
+                    "3": {
                       "STROKEWIDTH": "2.5",
                       "INFO": "Manage Groups",
                       "ICON": "MinusCircleIcon"
                     },
-                    "5": {
+                    "4": {
                       "INFO": "Searches",
                       "ICON": "CheckIcon"
                     },
-                    "6": {
+                    "5": {
                       "STROKEWIDTH": "2.5",
                       "INFO": "Data Sharing",
                       "ICON": "MinusCircleIcon"
+                    },
+                    "6": {
+                      "INFO": "Entry Limit (100)",
+                      "ICON": "CheckIcon"
                     }
                   }
                 },
                 "IPM": {
                   "INVOICE_PRODCUT_CODE": "price_1QxMylD6IjOeZ3YQBVsHnVI2",
                   "PRICE": {
-                    "CURRENCY": "$4",
+                    "CURRENCY": "$6.00",
                     "UNIT": "month",
                     "PRICE": ""
                   },
@@ -254,14 +266,18 @@
                       "STROKEWIDTH": "2.5",
                       "INFO": "Data Sharing",
                       "ICON": "MinusCircleIcon"
+                    },
+                    "6": {
+                      "INFO": "Entry Limit (350)",
+                      "ICON": "CheckIcon"
                     }
                   }
                 },
                 "IPY": {
                   "INVOICE_PRODCUT_CODE": "price_1QxMUWD6IjOeZ3YQHkYjKPrV",
                   "PRICE": {
-                    "CURRENCY": "$36",
-                    "UNIT": "year ($3/month)",
+                    "CURRENCY": "$60.00",
+                    "UNIT": "Annual (2 month free)",
                     "PRICE": ""
                   },
                   "DESCRIPTION": "Individual Plus Yearly Subscription Plan",
@@ -295,6 +311,54 @@
                       "STROKEWIDTH": "2.5",
                       "INFO": "Data Sharing",
                       "ICON": "MinusCircleIcon"
+                    },
+                    "6": {
+                      "INFO": "Entry Limit (350)",
+                      "ICON": "CheckIcon"
+                    }
+                  }
+                },
+                "IFP": {
+                  "INVOICE_PRODCUT_CODE": "price_1QxO1QD6IjOeZ3YQRW43gaYK",
+                  "PRICE": {
+                    "CURRENCY": "---",
+                    "UNIT": "---",
+                    "PRICE": ""
+                  },
+                  "DESCRIPTION": "Individual Freedom Plus Subscription Plan",
+                  "PLAN_ID": "INDIVIDUAL_FREEDOM_PLUS",
+                  "TITLE": "Individual Freedom Plus",
+                  "PRICE_PLAN": "Individual Freedom Plus Monthly",
+                  "PLAN": "Individual Freedom Plus",
+                  "OPTIONS": {
+                    "0": {
+                      "INFO": "Manage Credentials",
+                      "ICON": "CheckIcon"
+                    },
+                    "1": {
+                      "INFO": "Manage Accounts",
+                      "ICON": "CheckIcon"
+                    },
+                    "2": {
+                      "INFO": "Manage Contacts",
+                      "ICON": "CheckIcon"
+                    },
+                    "3": {
+                      "INFO": "Manage Groups",
+                      "ICON": "CheckIcon"
+                    },
+                    "4": {
+                      "INFO": "Searches",
+                      "ICON": "CheckIcon"
+                    },
+                    "5": {
+                      "INFO": "Data Sharing",
+                      "STROKEWIDTH": "2.5",
+                      "ICON": "MinusCircleIcon"
+                    },
+                    "6": {
+                      "INFO": "Entry Limit (Unlimited)",
+                      "ICON": "CheckIcon"
                     }
                   }
                 }
