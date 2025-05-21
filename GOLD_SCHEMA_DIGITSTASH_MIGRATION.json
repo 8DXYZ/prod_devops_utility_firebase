@@ -91,7 +91,26 @@
                 "SEO_IMG": "https://www.digitstash.com/digitstash.png",
                 "CONTACT_EMAIL": "dev.team@digitstash.com",
                 "ENV_LABEL": "Smart, Secure & Simple",
-                "ENV": "DEV"
+                "ENV": "DEV",
+                "PRODUCT_PLAN_META":{
+                  "ORDERS":{
+                    "IMF":0,
+                    "IPM":1,
+                    "IPY":2,
+                    "IFM":3,
+                    "IFY":4,
+                    "IFP":5
+                  },
+                  "ACTIVE": {
+                    "IMF":true,
+                    "IPM":true,
+                    "IPY":true,
+                    "IFM":true,
+                    "IFY":true,
+                    "IFPY":false
+
+                  }
+                }
               },
               "PRODUCT_INFO": {
                 "IFM": {
@@ -318,7 +337,7 @@
                     }
                   }
                 },
-                "IFP": {
+                "IFPY": {
                   "INVOICE_PRODCUT_CODE": "price_1QxO1QD6IjOeZ3YQRW43gaYK",
                   "PRICE": {
                     "CURRENCY": "---",
