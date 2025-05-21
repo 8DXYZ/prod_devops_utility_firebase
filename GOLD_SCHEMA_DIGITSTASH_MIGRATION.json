@@ -87,7 +87,7 @@
             "fields": {
               "APPLICATION": {
                 "SEO_URL": "https://www.digitstash.com",
-                "COPYRIGHT_LABEL": "DigitStash. All rights reserved.",
+                "COPYRIGHT_LABEL": "DigitStash. All rights reserved. Built on the E-Dax platform — U.S. patent pending.",
                 "SEO_IMG": "https://www.digitstash.com/digitstash.png",
                 "CONTACT_EMAIL": "dev.team@digitstash.com",
                 "ENV_LABEL": "Smart, Secure & Simple",
@@ -108,7 +108,6 @@
                     "IFM":true,
                     "IFY":true,
                     "IFPY":false
-
                   }
                 }
               },
@@ -154,6 +153,10 @@
                     "6": {
                       "INFO": "Entry Limit (700)",
                       "ICON": "CheckIcon"
+                    },
+                    "7": {
+                      "INFO": "2 Months Free",
+                      "ICON": "MinusCircleIcon"
                     }
                   }
                 },
@@ -161,7 +164,7 @@
                   "INVOICE_PRODCUT_CODE": "price_1QxNN5D6IjOeZ3YQWQ4EuGve",
                   "PRICE": {
                     "CURRENCY": "$120",
-                    "UNIT": "Annual (2 month free)",
+                    "UNIT": "Annual",
                     "PRICE": ""
                   },
                   "DESCRIPTION": "Individual Freedom Annual Subscription Plan",
@@ -197,6 +200,10 @@
                     },
                      "6": {
                       "INFO": "Entry Limit (700)",
+                      "ICON": "CheckIcon"
+                    },
+                    "7": {
+                      "INFO": "2 Months Free",
                       "ICON": "CheckIcon"
                     }
                   }
@@ -244,6 +251,10 @@
                     "6": {
                       "INFO": "Entry Limit (100)",
                       "ICON": "CheckIcon"
+                    },
+                    "7": {
+                      "INFO": "Always Free",
+                      "ICON": "CheckIcon"
                     }
                   }
                 },
@@ -289,6 +300,10 @@
                     "6": {
                       "INFO": "Entry Limit (350)",
                       "ICON": "CheckIcon"
+                    },
+                    "7": {
+                      "INFO": "2 Months Free",
+                      "ICON": "MinusCircleIcon"
                     }
                   }
                 },
@@ -296,7 +311,7 @@
                   "INVOICE_PRODCUT_CODE": "price_1QxMUWD6IjOeZ3YQHkYjKPrV",
                   "PRICE": {
                     "CURRENCY": "$60.00",
-                    "UNIT": "Annual (2 month free)",
+                    "UNIT": "Annual",
                     "PRICE": ""
                   },
                   "DESCRIPTION": "Individual Plus Yearly Subscription Plan",
@@ -334,19 +349,23 @@
                     "6": {
                       "INFO": "Entry Limit (350)",
                       "ICON": "CheckIcon"
+                    },
+                    "7": {
+                      "INFO": "2 Months Free",
+                      "ICON": "CheckIcon"
                     }
                   }
                 },
-                "IFPY": {
+                "IFP": {
                   "INVOICE_PRODCUT_CODE": "price_1QxO1QD6IjOeZ3YQRW43gaYK",
                   "PRICE": {
-                    "CURRENCY": "---",
+                    "CURRENCY": "$",
                     "UNIT": "---",
                     "PRICE": ""
                   },
                   "DESCRIPTION": "Individual Freedom Plus Subscription Plan",
                   "PLAN_ID": "INDIVIDUAL_FREEDOM_PLUS",
-                  "TITLE": "Individual Freedom Plus",
+                  "TITLE": "Individual Freedom Plus - Coming Soon",
                   "PRICE_PLAN": "Individual Freedom Plus Monthly",
                   "PLAN": "Individual Freedom Plus",
                   "OPTIONS": {
@@ -377,6 +396,10 @@
                     },
                     "6": {
                       "INFO": "Entry Limit (Unlimited)",
+                      "ICON": "CheckIcon"
+                    },
+                    "7": {
+                      "INFO": "... many more features",
                       "ICON": "CheckIcon"
                     }
                   }
@@ -418,6 +441,21 @@
                 }
               },
               "INDIVIDUAL_FREEDOM": {
+                "FEATURES": {
+                  "DATA_SHARING": false,
+                  "AD_FREE": false,
+                  "MANAGE_CREDENTIALS": true,
+                  "MULTI_USERS": false,
+                  "SEARCH": true,
+                  "FREESTYLE_GROUPINGS": false,
+                  "MANAGE_ACCOUNTS": true,
+                  "MANAGE_CONTACTS": true,
+                  "MANAGE_GROUPS": true,
+                  "ENTITY_GROUPINGS": true,
+                  "MANAGE_USERS": false
+                }
+              },
+              "INDIVIDUAL_FREEDOM_PLUS": {
                 "FEATURES": {
                   "DATA_SHARING": false,
                   "AD_FREE": false,
@@ -495,8 +533,8 @@
                 "STATUS": "ACTIVE",
                 "AUTHORIZATION_REQUIRED": true,
                 "ANNOUNCEMENT": {
-                  "MESSAGE": "We are launching our new product next week! Stay tuned.",
-                  "TITLE": "Important Update",
+                  "MESSAGE": "Get 2 months free on all yearly plans.Go with Individual Freedom (Yearly) and enjoy a free upgrade to Individual Freedom Plus — launching in 3 months.",
+                  "TITLE": "Early Access Bonus! ",
                   "SEVERITY": "info",
                   "STATE": "RUNNING"
                 }
