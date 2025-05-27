@@ -70,3 +70,6 @@ done c:\Workspace\e-dax-services\node_modules\@8d-xyz\bk-firebase_common_util-li
     yarn unlink "@8d-xyz/bk-firebase_restful-lib"
     yarn unlink "@8d-xyz/bk-firebase_connect-lib"
     yarn unlink "@8d-xyz/bk-express_restful-lib"
+
+
+    node ./src/scripts/runMigration.js import GOLD_SCHEMA_DIGITSTASH_MIGRATION_0.0.0-1.json /COM/IREVA/APPS/DEV/0_0_0/0 
